@@ -79,7 +79,8 @@ function conferencestats_get_sessions_count() {
   $query->join('field_data_field_session_status', 'f', 'f.entity_id = n.nid');
   $query->condition('type', 'session');
   $query->condition('status', '1');
-  $query->condition('field_session_status_value', '1');
+  $query->condition('field_session_status_value', '0'); // 0|Unprocessed
+  //$query->condition('field_session_status_value', '1'); // 1|Accepted
   $result = $query->execute();
   return sprintf("%02s", $result->rowCount());
 }
