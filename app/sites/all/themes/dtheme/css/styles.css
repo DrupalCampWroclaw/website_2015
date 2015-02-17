@@ -2171,7 +2171,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1416815997');
+  background-image: url('../images/progress.gif?1422872711');
 }
 
 /* line 1, ../sass/components/_table.scss */
@@ -2571,7 +2571,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 18.5px 14px 18.5px 0;
+  border-width: 37.5px 17px 37.5px 0;
   border-color: transparent #e1e0d7 transparent transparent;
   content: "";
   position: absolute;
@@ -2583,7 +2583,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 18.5px 0 18.5px 14px;
+  border-width: 37.5px 0 37.5px 17px;
   border-color: transparent transparent transparent #e1e0d7;
   content: "";
   position: absolute;
@@ -3197,7 +3197,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #eb4e3a;
   text-align: right;
 }
-/* line 38, ../../../../../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 .view-news-frontpage .views-row .node-news.node-teaser ul.links:after {
   content: "";
   display: table;
