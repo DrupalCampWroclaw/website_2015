@@ -2215,6 +2215,21 @@ table tr:hover td {
   background-color: #fcf1ed;
 }
 
+/* line 2, ../sass/components/blocks/_block-flickr-flickr.scss */
+#block-flickr-flickr #flickr-gallery {
+  text-align: center;
+  vertical-align: top;
+}
+/* line 5, ../sass/components/blocks/_block-flickr-flickr.scss */
+#block-flickr-flickr #flickr-gallery .img-flickr-gallery {
+  display: inline-block;
+  margin: 1em;
+}
+/* line 8, ../sass/components/blocks/_block-flickr-flickr.scss */
+#block-flickr-flickr #flickr-gallery .img-flickr-gallery img {
+  max-height: 160px;
+}
+
 @media only screen and (max-width: 767px) {
   /* line 1, ../sass/components/blocks/_block-layout-main-menu.scss */
   #block-layout-main-menu {

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * @file
@@ -11,16 +11,9 @@
  */
 
 function flickr_block_info() {
-$blocks = array();
+  $blocks = array();
   $blocks['flickr'] = array(
-
     'info' => t('flickr'),
-    'status' => TRUE,
-    'region' => 'sidebar_first',
-    'visibility' => BLOCK_VISIBILITY_NOTLISTED,
-    'cache' => DRUPAL_NO_CACHE,
-
-
   );
 
   return $blocks;
@@ -32,75 +25,68 @@ $blocks = array();
  */
 
 function flickr_block_view($delta) {
-
   $block = array();
-
   switch ($delta) {
-
     case 'flickr':
-
-      $block['subject'] = t('flickr api');
-
+      $block['subject'] = t('Flickr Gallery');
       $block['content'] = array(
-            
-             '#markup' => flickr()
-           );
-
+        '#markup' => flickr()
+      );
       break;
-
   }
   return $block;
-
 }
+
 /**
  * main function for load json code from flickr and parser this code and build gallery structure.
  */
 
 function flickr() {
-
-
-	$json = json_flickr_load();
-
-	return flickr_gallery_build($json);
+  $json = json_flickr_load();
+  return flickr_gallery_build($json);
 }
+
 /**
  * This function parse json code from flickr
  */
 function json_flickr_load() {
 
-	$request = drupal_http_request('https://api.flickr.com/services/feeds/groups_pool.gne?id=2453588@N21&format=json');
-	// $json = json_decode(ereg_replace("^jsonFlickrFeed\((.*)\)$", "\\1", stripslashes(strip_tags($request->data))));
-	$json =$request->data;
-	$json = str_replace( 'jsonFlickrFeed(', '', $json );
-	$json = substr( $json, 0, strlen( $json ) - 1 );
-	$json = json_decode($json);
+  $request = drupal_http_request('https://api.flickr.com/services/feeds/groups_pool.gne?id=2453588@N21&format=json');
+  // $json = json_decode(ereg_replace("^jsonFlickrFeed\((.*)\)$", "\\1", stripslashes(strip_tags($request->data))));
+  $json = $request->data;
+  $json = str_replace('jsonFlickrFeed(', '', $json);
+  $json = substr($json, 0, strlen($json) - 1);
+  $json = json_decode($json);
 
-	return $json;
+  return $json;
 
 }
+
 /**
  * This function build html structure for gallery
-*/
+ */
 function flickr_gallery_build($json) {
-	
-	$output = '';
 
-	$i = 0;
-	$output .= '<div id ="flickr-gallery" class = "flickr gallery">';
-	foreach ($json->items as $key => $item) {
-		$output .=  '<div id="img-flickr-gallery" class = "image flickr-img gallery-img" >';
-		$output .=  '<a href="https://www.flickr.com/groups/drupalcampwroclaw/pool/" target="_blank">';	
-		$output .=  '<img src="';
-		$output .=  $item->media->m;
-		$output .=  '" alt="';
-		$output .=  $item->title;
-		$output .=  '"></a>';
-		$output .=  '</div>';
-		if ($i >= 7) break ;
-		$i++;
-	}
+  $output = '';
 
-	$output .= '</div>';
-return $output;
+  $i = 0;
+  $output .= '<div id ="flickr-gallery" class="clearfix flickr gallery">';
+  foreach ($json->items as $key => $item) {
+    $output .= '<div class="img-flickr-gallery" class = "image flickr-img gallery-img" >';
+    $output .= '<a href="https://www.flickr.com/groups/drupalcampwroclaw/pool/" target="_blank">';
+    $output .= '<img src="';
+    $output .= $item->media->m;
+    $output .= '" alt="';
+    $output .= $item->title;
+    $output .= '"></a>';
+    $output .= '</div>';
+    if ($i >= 7) {
+      break;
+    }
+    $i++;
+  }
+
+  $output .= '</div>';
+  return $output;
 
 }

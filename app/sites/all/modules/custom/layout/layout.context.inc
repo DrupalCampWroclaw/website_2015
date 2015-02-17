@@ -62,11 +62,11 @@ function layout_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-6',
         ),
-        'layout-flickr_gallery' => array(
-          'module' => 'layout',
-          'delta' => 'flickr_gallery',
+        'flickr-flickr' => array(
+          'module' => 'flickr',
+          'delta' => 'flickr',
           'region' => 'footer',
-          'weight' => '-5',
+          'weight' => '-4',
         ),
       ),
     ),

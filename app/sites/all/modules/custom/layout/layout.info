@@ -6,6 +6,7 @@ project = layout
 dependencies[] = block
 dependencies[] = context
 dependencies[] = ctools
+dependencies[] = flickr
 dependencies[] = strongarm
 dependencies[] = superfish
 dependencies[] = views
