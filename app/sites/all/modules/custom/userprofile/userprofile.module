@@ -33,12 +33,12 @@ function userprofile_header_bar() {
   }
   else {
     $menu_links[] = array(
-      'href' =>  'user/register',
-      'title' => t('Register'),
-    );
-    $menu_links[] = array(
       'href' =>  'user/login',
       'title' => t('Login'),
+    );
+    $menu_links[] = array(
+      'href' =>  'user/register',
+      'title' => t('Register'),
     );
   }
 

@@ -30,3 +30,5 @@ conf/build/logs/*
 
 app/FirePHPCore
 app/FirePHPCore/*
+
+.idea

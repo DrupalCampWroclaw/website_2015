@@ -9,23 +9,43 @@
 ?>
 
 <div id="page-all">
-
+  <div id="mobile-menu-links"><?php print $main_menu_mobile; ?></div>
   <div id="header-over-bg">
     <div id="header-over">
-      <div id="header-bar" class="clearfix">
-        <div id="header-bar-center">
-         <div id="header-bar-left">
-         </div>
-          <div id="header-bar-center-text" class="clearfix">
-            <div id="conference-statistics"><?php print $confstats; ?></div>
-            <div id="user-links"><?php print $userlinks; ?></div>
-            <?php /*<div id="social-links" ><?php print $sociallinks; ?></div>*/ ?>
+      <div id="header-bar-full" class="clearfix">
+        <div id="header-bar" class="clearfix">
+          <div id="header-bar-center">
+
+            <div id="header-bar-center-text" class="clearfix">
+              <div id="header-bar-center-mobile-menu">
+                <a href="#" class="mobile-menu-button"><?php print t('Menu'); ?></a>
+
+              </div>
+              <div id="header-bar-center-text-left">
+                <div id="social-links"
+                     class="header-bar-center-item"><?php print $sociallinks; ?></div>
+                <div id="conference-statistics"
+                     class="header-bar-center-item"><?php print $confstats; ?></div>
+              </div>
+
+              <div id="header-bar-center-text-right">
+                <div id="user-links"
+                     class="header-bar-center-item"><?php print $userlinks; ?></div>
+                <?php /*
+                <div id="language-links"
+                     class="header-bar-center-item"><?php print $language_links; ?></div> */?>
+              </div>
+
+
+            </div>
+
           </div>
 
-          <div id="header-bar-right">
-          </div>
+          <?php print $header_logo; ?>
+
         </div>
       </div>
+
     </div>
   </div>
 
@@ -44,7 +64,8 @@
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
         <?php if ($title): ?>
-          <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+          <h1 class="page__title title"
+              id="page-title"><?php print $title; ?></h1>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
         <?php print $messages; ?>
@@ -61,9 +82,9 @@
 
 
       <?php
-        // Render the sidebars to see if there's anything in them.
-        $sidebar_first  = render($page['sidebar_first']);
-        $sidebar_second = render($page['sidebar_second']);
+      // Render the sidebars to see if there's anything in them.
+      $sidebar_first = render($page['sidebar_first']);
+      $sidebar_second = render($page['sidebar_second']);
       ?>
 
       <?php if ($sidebar_first || $sidebar_second): ?>
@@ -74,22 +95,10 @@
       <?php endif; ?>
 
     </div>
-  </div>  <!-- end main-over -->
+  </div>
+  <!-- end main-over -->
 
   <?php print render($page['footer']); ?>
 
-</div>
-
 <?php print render($page['bottom']); ?>
 
-<div id="page-bottom-links-over">
-  <div id="page-bottom-links" class="block">
-  <a href="https://github.com/DrupalCampWroclaw" target="_blank">DrupalCamp Wroclaw on GitHub</a>
-   <br/>
-    <a href="http://2012.drupalcampwroclaw.pl/" target="_blank">DrupalCamp Wroclaw 2012</a>
-     | <a href="http://2013.drupalcampwroclaw.pl/"  target="_blank">DrupalCamp Wroclaw 2013</a>
-     | <a href="http://www.drupalday.pl/"  target="_blank">DrupalDay</a>
-     | <a href="http://www.drupalidzienastudia.pl/"  target="_blank">Drupal idzie na studia </a>
-     | <a href="https://groups.drupal.org/poland"  target="_blank">Drupal Groups - Poland</a>
-  </div>
-</div>

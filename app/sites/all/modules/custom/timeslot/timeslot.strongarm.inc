@@ -14,7 +14,7 @@ function timeslot_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_timeslot';
-  $strongarm->value = 'edit-display';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_timeslot'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -162,7 +162,7 @@ function timeslot_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_timeslot';
-  $strongarm->value = '0';
+  $strongarm->value = '4';
   $export['language_content_type_timeslot'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -187,7 +187,6 @@ function timeslot_strongarm() {
   $strongarm->name = 'node_options_timeslot';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_timeslot'] = $strongarm;
 

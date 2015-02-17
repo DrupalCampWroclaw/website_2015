@@ -56,6 +56,11 @@ function dtheme_preprocess_page(&$variables, $hook) {
   $variables['sociallinks'] = sociallinks_header_bar();
   $variables['confstats'] = conferencestats_header_bar();
   $variables['userlinks'] = userprofile_header_bar();
+  $variables['language_links'] = layout_language_links();
+
+  $variables['main_menu_mobile'] = layout_block_main_menu();
+
+  $variables['header_logo'] = l(t('Home'), '<front>', array('html' => TRUE, 'attributes' => array('id' => 'header-logo')));
 }
 
 

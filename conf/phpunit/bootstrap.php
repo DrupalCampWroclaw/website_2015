@@ -3,15 +3,9 @@
 $current_dir = getcwd();
 
 
-print "=========== Current dir: $current_dir \n";
+print "=========== Current dir (/conf/phpunit/bootstrap.php): $current_dir \n";
 
 switch ($current_dir) {
-  case '/var/lib/jenkins/workspace/wouworld_dev/app':
-   $test_host = 'www.dev.wouworld.s1v1.droptica.org';
-  break;
-  case '/home/gbartman/openBIT/www2/wouworld/app':
-    $test_host = 'www.wouworld.gbartman';
-  break;
   default:
     $test_host = 'example.com';
   break;

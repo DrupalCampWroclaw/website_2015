@@ -11,7 +11,7 @@
             return;
           }
           var status = Drupal.cookiec.getCurrentStatus();
-          console.log(status);
+
           var agreed_enabled = Drupal.settings.cookiec.popup_agreed_enabled;
           var popup_hide_agreed = Drupal.settings.cookiec.popup_hide_agreed;
           if (status == 0) {

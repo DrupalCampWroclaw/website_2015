@@ -40,6 +40,7 @@ function session_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'display_summary' => 1,
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -81,6 +82,7 @@ function session_field_default_field_instances() {
     'label' => 'Experience level',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -122,6 +124,7 @@ function session_field_default_field_instances() {
     'label' => 'Session Language',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -159,6 +162,7 @@ function session_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'slides',
       'file_extensions' => 'ppt pdf odt odp',
       'max_filesize' => '',
@@ -203,6 +207,7 @@ function session_field_default_field_instances() {
     'label' => 'Speakers',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -248,6 +253,7 @@ function session_field_default_field_instances() {
     'label' => 'Status',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -284,6 +290,7 @@ function session_field_default_field_instances() {
     'label' => 'Session Time Slot',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -327,6 +334,7 @@ function session_field_default_field_instances() {
     'settings' => array(
       'description_field' => 0,
       'description_length' => 128,
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -335,6 +343,49 @@ function session_field_default_field_instances() {
       'settings' => array(),
       'type' => 'video_embed_field_video',
       'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance: 'node-session-title_field'
+  $field_instances['node-session-title_field'] = array(
+    'bundle' => 'session',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
     ),
   );
 
@@ -347,6 +398,7 @@ function session_field_default_field_instances() {
   t('Slides');
   t('Speakers');
   t('Status');
+  t('Title');
   t('Upload your slides here as a PDF, or link to them from the description. (This is typically done after your session.)');
   t('Youtube');
 

@@ -9,19 +9,29 @@
 /* Import Sass mixins, variables, Compass modules, etc. */
 @import "init";
 
+@import "variables/*";
+
 /* HTML element (SMACSS base) rules */
 @import "normalize";
 
 /* Layout rules */
 @import "layouts/responsive";
 
-/* Component (SMACSS module) rules */
-@import "components/misc";
 // Optionally, add your own components here.
 @import "print";
 
-@import "components/fresh";
+
+
+@import "components/*";
+@import "components/blocks/*";
+@import "components/menu/*";
+@import "components/nodes/*";
+@import "components/pages/*";
+@import "components/regions/*";
+@import "components/views/*";
+
 
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
+

@@ -45,6 +45,7 @@ function timeslot_field_default_field_instances() {
       'default_value2' => 'strtotime',
       'default_value_code' => '2014-05-17',
       'default_value_code2' => '2014-05-17',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -91,6 +92,7 @@ function timeslot_field_default_field_instances() {
     'label' => 'Room',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -102,10 +104,54 @@ function timeslot_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-timeslot-title_field'
+  $field_instances['node-timeslot-title_field'] = array(
+    'bundle' => 'timeslot',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Date');
   t('Room');
+  t('Title');
 
   return $field_instances;
 }

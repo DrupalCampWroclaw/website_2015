@@ -3,9 +3,9 @@
 // D7 database
 $databases['default']['default'] = array(
   'driver' => 'mysql',
-  'database' => 'database',
-  'username' => 'username',
-  'password' => 'password',
+  'database' => 'drupalcamp',
+  'username' => 'drupalcamp',
+  'password' => 'drupalcamp',
   'host' => 'localhost',
   'prefix' => '',
   'collation' => 'utf8_general_ci',

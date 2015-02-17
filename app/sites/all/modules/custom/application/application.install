@@ -199,3 +199,76 @@ function application_update_7030() {
   drupal_flush_all_caches();
   application_api_features_revert(application_features_list());
 }
+
+
+/**
+ * Update 2015-01-17
+ */
+function application_update_7031() {
+
+  $module_list = array(
+    'partners_page',
+    'title',
+  );
+  module_enable($module_list);
+  module_list(TRUE, FALSE);
+
+  drupal_flush_all_caches();
+  application_api_features_revert(application_features_list());
+
+  drupal_flush_all_caches();
+}
+
+/**
+ * Update 2015-01-24
+ */
+function application_update_7032() {
+  module_enable(array('entity_translate', 'title'));
+  drupal_flush_all_caches();
+  application_api_features_revert(application_features_list()); // Try to revert Page feature. Don't work in first revert.
+
+  $node_types = array('forum', 'job', 'news', 'page', 'partners', 'room', 'session', 'sponsor', 'timeslot');
+  foreach($node_types as $node_type){
+    title_field_replacement_batch_set('node', $node_type, 'title');
+  }
+
+  //Create featured speakers
+  $users = array('12', '14', '21');
+  foreach ($users as $user){
+    $user = user_load($user);
+    $user->field_user_category['und'][0]['value'] = 'featured';
+    user_save($user);
+  }
+
+  // Expand all menu items in main menu.
+  $menu_items = menu_tree_all_data('main-menu', NULL, 1);
+  foreach ($menu_items as $menu_item) {
+    $link = $menu_item['link'];
+    $mlid = $link['mlid'];
+    $menu_item_loaded = menu_link_load($mlid);
+    $menu_item_loaded['expanded'] = 1;
+    menu_link_save($menu_item_loaded);
+  }
+
+  node_delete(11); // Partners node delete - replaced by view.
+
+  $item = array(
+    'link_path' => 'partners',
+    'link_title' => 'Partners',
+    'menu_name' => 'main-menu',
+    'weight' => -43,
+    'plid' => 0,
+    'module' => 'menu',
+  );
+  menu_link_save($item);
+
+
+  // Update block content.
+  $query = "UPDATE  `drupalcamp`.`block_custom` SET  `body` =  '<ul>
+	<li>01.02.2015 - 30.04.2015 Call for papers.</li>
+	<li>01.05.2015 - 15.05.2015 Voting for sessions.</li>
+	<li>29 - 31.05.2015 DrupalCamp Wroclaw</li>
+</ul>
+  ' WHERE  `block_custom`.`bid` =2;";
+  db_query($query);
+}

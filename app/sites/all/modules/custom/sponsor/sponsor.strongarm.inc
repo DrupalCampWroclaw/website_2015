@@ -89,6 +89,9 @@ function sponsor_strongarm() {
         'path' => array(
           'weight' => '30',
         ),
+        'language' => array(
+          'weight' => '5',
+        ),
       ),
       'display' => array(),
     ),
@@ -113,7 +116,7 @@ function sponsor_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_sponsor';
-  $strongarm->value = '0';
+  $strongarm->value = '4';
   $export['language_content_type_sponsor'] = $strongarm;
 
   $strongarm = new stdClass();

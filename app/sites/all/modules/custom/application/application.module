@@ -27,11 +27,15 @@ function application_features_list() {
     'news',
     'layout',
     'page',
+    'partners_page',
     'room',
     'sponsor',
     'text_formats',
     'timeslot',
     'userprofile',
+    'job',
+    'session',
+    'partners_page',
   );
   return $features;
 }

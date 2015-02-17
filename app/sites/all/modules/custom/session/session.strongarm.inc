@@ -14,7 +14,7 @@ function session_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_session';
-  $strongarm->value = 'edit-display';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_session'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -141,7 +141,7 @@ function session_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_session';
-  $strongarm->value = '0';
+  $strongarm->value = '4';
   $export['language_content_type_session'] = $strongarm;
 
   $strongarm = new stdClass();

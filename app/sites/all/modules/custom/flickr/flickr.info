@@ -1,0 +1,5 @@
+name = Flickr Gallery
+core = 7.x
+package = Flickr Gallery
+version = 7.x-1.0
+project = Flickr Gallcery

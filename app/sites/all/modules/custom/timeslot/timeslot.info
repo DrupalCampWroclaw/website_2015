@@ -16,8 +16,10 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[field_base][] = field_timeslot_date
 features[field_base][] = field_timeslot_room
+
 features[field_instance][] = node-timeslot-field_timeslot_date
 features[field_instance][] = node-timeslot-field_timeslot_room
+features[field_instance][] = node-timeslot-title_field
 features[node][] = timeslot
 features[variable][] = additional_settings__active_tab_timeslot
 features[variable][] = ant_pattern_timeslot
@@ -44,4 +46,5 @@ features[variable][] = node_preview_timeslot
 features[variable][] = node_submitted_timeslot
 features[views_view][] = timeslots
 features[views_view][] = timeslots_for_session
+mtime = 1421530492
 project status url = http://updates-drupal.drupalcampwroclaw.pl/release-history

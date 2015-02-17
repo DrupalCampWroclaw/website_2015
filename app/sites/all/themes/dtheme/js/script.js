@@ -19,6 +19,21 @@ Drupal.behaviors.my_custom_behavior = {
 
     // Place your code here.
 
+
+
+
+      $('#mobile-menu-links li.expanded').prepend('<div class="menu-item-expand-link"><span>+</span></div>');
+
+      $("#mobile-menu-links li.expanded .menu-item-expand-link").live( "click", function() {
+          $(this).parent('li').toggleClass('open');
+      });
+
+      $(".mobile-menu-button").live( "click", function() {
+          $('#mobile-menu-links').toggleClass('open');
+      });
+
+
+
   }
 };
 

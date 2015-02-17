@@ -2,7 +2,7 @@
 #Build parameters
 
 
-PARAM_PROJECT_PATH="/home/username/www/drupalcampwroclaw/website"
+PARAM_PROJECT_PATH="/home/username/www/drupalcampwroclaw/website_2015"
 
 PARAM_DRUPAL_LOCATION="app"
 
@@ -23,6 +23,6 @@ PARAM_ADMIN_PASS="123"
 # For existing project:
 
 PARAM_DBUSER="drupalcamp"
-PARAM_DBPASS="123"
+PARAM_DBPASS="drupalcamp"
 PARAM_DBNAME_DRUPAL="drupalcamp"
-PARAM_DBDUMP_FILE="drupalcampwroclaw.tar.gz"
+PARAM_DBDUMP_FILE="database.sql.tar.gz"
