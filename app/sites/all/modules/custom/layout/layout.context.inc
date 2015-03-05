@@ -166,13 +166,13 @@ function layout_context_default_contexts() {
           'module' => 'layout',
           'delta' => 'sessions',
           'region' => 'sidebar_second',
-          'weight' => '-8',
+          'weight' => '-9',
         ),
-        'block-2' => array(
-          'module' => 'block',
-          'delta' => '2',
+        'bean-important-dates' => array(
+          'module' => 'bean',
+          'delta' => 'important-dates',
           'region' => 'sidebar_second',
-          'weight' => '15',
+          'weight' => '-8',
         ),
       ),
     ),
