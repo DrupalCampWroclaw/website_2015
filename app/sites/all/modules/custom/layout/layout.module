@@ -104,9 +104,18 @@ function layout_theme($existing, $type, $theme, $path) {
  * @return string
  */
 function layout_block_main_menu() {
+  global $language;
+
   $output = '';
 
-  $main_menu_tree = menu_tree('main-menu');
+  if ($language->language == 'en') {
+    $main_menu_tree = menu_tree('main-menu');
+  }
+
+  if ($language->language == 'pl') {
+    $main_menu_tree = menu_tree('pl-main-menu');
+  }
+
   $output .= drupal_render($main_menu_tree);
 
   return $output;
