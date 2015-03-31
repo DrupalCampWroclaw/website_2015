@@ -259,11 +259,13 @@ $max-page-width: $width-page;
 }
 
 .view-sponsors-page{
+  text-align: center;
   h3 {
     color: $red1;
     width: 100%;
     clear: both;
     float: left;
+    text-align: center;
   }
 
   @media (min-width: 768px) {
@@ -271,7 +273,7 @@ $max-page-width: $width-page;
 
 
     .views-row{
-      float: left;
+      display: inline-block;
       width: 50%;
       text-align: center;
     }
@@ -298,6 +300,18 @@ $max-page-width: $width-page;
     .view-display-id-attachment_5{
       .views-row{
         width: 100%;
+      }
+    }
+    // Graphics
+    .view-display-id-attachment_6{
+      .views-row{
+        width: 33%;
+      }
+    }
+    // Prize
+    .view-display-id-attachment_7{
+      .views-row{
+        width: 33%
       }
     }
   }

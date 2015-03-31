@@ -122,9 +122,9 @@ function layout_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-3' => array(
-          'module' => 'block',
-          'delta' => '3',
+        'bean-proposed-sessions-text' => array(
+          'module' => 'bean',
+          'delta' => 'proposed-sessions-text',
           'region' => 'content_top',
           'weight' => '-10',
         ),

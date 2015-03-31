@@ -6,6 +6,17 @@
 
 include_once 'userprofile.features.inc';
 
+/**
+ * Implements hook_form_alter().
+ */
+function userprofile_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+    case 'user_profile_form':
+      drupal_add_js(drupal_get_path('module', 'userprofile') . '/js/script.js');
+      break;
+  }
+}
+
 
 /**
  * Social links in header of page.
@@ -21,11 +32,11 @@ function userprofile_header_bar() {
   if (user_is_logged_in()) {
     global $user;
     $menu_links[] = array(
-      'href' =>  'user/' . $user->uid,
+      'href' => 'user/' . $user->uid,
       'title' => t('My profile'),
     );
     $menu_links[] = array(
-      'href' =>  'user/logout',
+      'href' => 'user/logout',
       'title' => t('Logout'),
     );
     // Todo
@@ -33,18 +44,19 @@ function userprofile_header_bar() {
   }
   else {
     $menu_links[] = array(
-      'href' =>  'user/login',
+      'href' => 'user/login',
       'title' => t('Login'),
     );
     $menu_links[] = array(
-      'href' =>  'user/register',
+      'href' => 'user/register',
       'title' => t('Register'),
     );
   }
 
-  $output .= theme('links',  array(
-                'links' => $menu_links,
-                'attributes' => array('class' => array('user-links'))));
+  $output .= theme('links', array(
+    'links' => $menu_links,
+    'attributes' => array('class' => array('user-links')),
+    ));
 
   return $output;
 }

@@ -1193,127 +1193,140 @@ table {
   margin: 0.5em 0;
 }
 
-/* line 262, ../sass/components/_fresh.scss */
+/* line 261, ../sass/components/_fresh.scss */
+.view-sponsors-page {
+  text-align: center;
+}
+/* line 263, ../sass/components/_fresh.scss */
 .view-sponsors-page h3 {
   color: #eb4e3a;
   width: 100%;
   clear: both;
   float: left;
+  text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 273, ../sass/components/_fresh.scss */
+  /* line 275, ../sass/components/_fresh.scss */
   .view-sponsors-page .views-row {
-    float: left;
+    display: inline-block;
     width: 50%;
     text-align: center;
   }
-  /* line 281, ../sass/components/_fresh.scss */
+  /* line 283, ../sass/components/_fresh.scss */
   .view-sponsors-page .view-display-id-attachment_2 .views-row {
     width: 33%;
   }
-  /* line 287, ../sass/components/_fresh.scss */
+  /* line 289, ../sass/components/_fresh.scss */
   .view-sponsors-page .view-display-id-attachment_3 .views-row {
     width: 33%;
   }
-  /* line 293, ../sass/components/_fresh.scss */
+  /* line 295, ../sass/components/_fresh.scss */
   .view-sponsors-page .view-display-id-attachment_4 .views-row {
     width: 25%;
   }
-  /* line 299, ../sass/components/_fresh.scss */
+  /* line 301, ../sass/components/_fresh.scss */
   .view-sponsors-page .view-display-id-attachment_5 .views-row {
     width: 100%;
   }
+  /* line 307, ../sass/components/_fresh.scss */
+  .view-sponsors-page .view-display-id-attachment_6 .views-row {
+    width: 33%;
+  }
+  /* line 313, ../sass/components/_fresh.scss */
+  .view-sponsors-page .view-display-id-attachment_7 .views-row {
+    width: 33%;
+  }
 }
 
-/* line 307, ../sass/components/_fresh.scss */
+/* line 321, ../sass/components/_fresh.scss */
 #footer-inner .block {
   width: 100%;
   clear: both;
   float: left;
 }
 
-/* line 313, ../sass/components/_fresh.scss */
+/* line 327, ../sass/components/_fresh.scss */
 .view-id-sponsors_frontpage_block {
   text-align: center;
 }
 
-/* line 318, ../sass/components/_fresh.scss */
+/* line 332, ../sass/components/_fresh.scss */
 .view-id-sponsors_frontpage_block.view-display-id-block .views-row {
   float: left;
   width: 50%;
 }
 
-/* line 325, ../sass/components/_fresh.scss */
+/* line 339, ../sass/components/_fresh.scss */
 .view-id-sponsors_frontpage_block.view-display-id-block_1 .views-row {
   float: left;
   width: 50%;
 }
 
-/* line 332, ../sass/components/_fresh.scss */
+/* line 346, ../sass/components/_fresh.scss */
 .view-id-sponsors_frontpage_block.view-display-id-block_2 .views-row {
   float: left;
   width: 33%;
 }
 
-/* line 338, ../sass/components/_fresh.scss */
+/* line 352, ../sass/components/_fresh.scss */
 .view-sponsors-diamond-block {
   text-align: center;
 }
-/* line 340, ../sass/components/_fresh.scss */
+/* line 354, ../sass/components/_fresh.scss */
 .view-sponsors-diamond-block .view-footer {
   margin-top: 1em;
 }
 
-/* line 346, ../sass/components/_fresh.scss */
+/* line 360, ../sass/components/_fresh.scss */
 .profile .user-picture {
   float: none;
 }
 
-/* line 353, ../sass/components/_fresh.scss */
+/* line 367, ../sass/components/_fresh.scss */
 .page-jobs #content table td {
   width: 50%;
 }
 
-/* line 362, ../sass/components/_fresh.scss */
+/* line 376, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .pager {
   display: none;
 }
-/* line 377, ../sass/components/_fresh.scss */
+/* line 391, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table th {
   background: #007aac;
   color: white;
 }
-/* line 382, ../sass/components/_fresh.scss */
+/* line 396, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table td {
   width: 50%;
 }
-/* line 386, ../sass/components/_fresh.scss */
+/* line 400, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table .multi-day,
 .view-sessions-accepted-calendar .calendar-calendar table .calendar-agenda-hour,
 .view-sessions-accepted-calendar .calendar-calendar table .calendar-dayview-hour {
   display: none;
 }
-/* line 392, ../sass/components/_fresh.scss */
+/* line 406, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table .date-display-single {
   font-weight: bold;
   font-size: 1.2em;
   color: #eb4e3a;
 }
-/* line 399, ../sass/components/_fresh.scss */
+/* line 413, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table .views-field.views-field-field-session-speakers a {
   color: #a5a4a4;
 }
-/* line 404, ../sass/components/_fresh.scss */
+/* line 418, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table .views-field.views-field-title {
   font-size: 1.2em;
 }
-/* line 408, ../sass/components/_fresh.scss */
+/* line 422, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table .calendar.dayview,
 .view-sessions-accepted-calendar .calendar-calendar table td.single-day div.dayview,
 .view-sessions-accepted-calendar .calendar-calendar table td .inner div, .view-sessions-accepted-calendar .calendar-calendar table .calendar-calendar td .inner div a {
   background: white !important;
 }
-/* line 414, ../sass/components/_fresh.scss */
+/* line 428, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table td.single-day div.dayview {
   background: white;
   width: auto;
@@ -2171,7 +2184,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1422872711');
+  background-image: url('../images/progress.gif?1425371409');
 }
 
 /* line 1, ../sass/components/_table.scss */
@@ -3197,7 +3210,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #eb4e3a;
   text-align: right;
 }
-/* line 38, ../../../../../../../../lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
 .view-news-frontpage .views-row .node-news.node-teaser ul.links:after {
   content: "";
   display: table;

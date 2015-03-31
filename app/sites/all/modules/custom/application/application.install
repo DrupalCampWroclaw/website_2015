@@ -16,7 +16,7 @@ function application_install() {
   $module_list = array(
     'node',
     'layout',
-    'backup_migrate',
+    'backup_migrate'
   );
   module_enable($module_list);
   module_list(TRUE, FALSE);
@@ -460,4 +460,74 @@ function application_update_7036() {
   application_api_features_revert(application_features_list());
 
   application_api_update_translations();
+}
+
+/**
+ * Update 2015-03-16: Enable GlobalRedirect module.
+ */
+
+function application_update_7037() {
+
+  $module_list = array(
+    'globalredirect'
+  );
+  module_enable($module_list);
+  module_list(TRUE, FALSE);
+  // Flush caches.
+  drupal_flush_all_caches();
+
+}
+
+/*
+ * Text.
+ */
+
+function application_update_7038() {
+  $bean = bean_create(array('type' => 'simple_block_with_translations'));
+  $bean->label = 'Sponsors text';
+  $bean->title = '';
+  $bean->delta = 'sponsor-text';
+  $bean->field_block_content = array(
+    'en' => array(
+      0 => array(
+        'format' => 'full_html',
+        'value' => '<p>With our proposal we would like to encourage you to help with organization of the third conference in Poland devoted to CMS Drupal. We believe that the event will attract many experts, at the same time allowing you to promote your own business.
+                  <a href="http://www.drupalcampwroclaw.pl/downloadfiles/sponsorship_offer.pdf">Click here to download Sponsorship offer in PDF</a></p>',
+      ),
+    ),
+
+    'pl' => array(
+      0 => array(
+        'format' => 'full_html',
+        'value' => '<p>With our proposal we would like to encourage you to help with organization of the third conference in Poland devoted to CMS Drupal. We believe that the event will attract many experts, at the same time allowing you to promote your own business.
+                  <a href="http://www.drupalcampwroclaw.pl/downloadfiles/sponsorship_offer.pdf">Click here to download Sponsorship offer in PDF</a></p>',
+      ),
+    ),
+
+  );
+  $bean->save();
+
+  $bean = bean_create(array('type' => 'simple_block_with_translations'));
+  $bean->label = 'Proposed sessions text';
+  $bean->title = '';
+  $bean->delta = 'proposed-sessions-text';
+  $bean->field_block_content = array(
+    'en' => array(
+      0 => array(
+        'format' => 'full_html',
+        'value' => '<p>The time for one session is maximum 60 minutes. The first 45 minutes are for the session itself, while the next 15 mins are for attendees\' questions. When the session lasts too long, it must be stopped after 60 minutes to allow the participants to go to the next lecture and the speakers to prepare for the next presentation</p>'
+      ),
+    ),
+
+    'pl' => array(
+      0 => array(
+        'format' => 'full_html',
+        'value' => '<p>The time for one session is maximum 60 minutes. The first 45 minutes are for the session itself, while the next 15 mins are for attendees\' questions. When the session lasts too long, it must be stopped after 60 minutes to allow the participants to go to the next lecture and the speakers to prepare for the next presentation</p>'
+      ),
+    ),
+
+  );
+  $bean->save();
+
+  drupal_flush_all_caches();
 }

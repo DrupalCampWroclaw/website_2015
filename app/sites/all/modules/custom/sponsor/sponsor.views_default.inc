@@ -390,10 +390,6 @@ function sponsor_views_default_views() {
     ),
   );
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Header: Global: PHP */
-  $handler->display->display_options['header']['php']['id'] = 'php';
-  $handler->display->display_options['header']['php']['table'] = 'views';
-  $handler->display->display_options['header']['php']['field'] = 'php';
   /* Field: Content: Sponsor website */
   $handler->display->display_options['fields']['field_sponsor_website']['id'] = 'field_sponsor_website';
   $handler->display->display_options['fields']['field_sponsor_website']['table'] = 'field_data_field_sponsor_website';
@@ -426,7 +422,7 @@ function sponsor_views_default_views() {
   $handler->display->display_options['fields']['field_sponsor_logo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_sponsor_logo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_sponsor_logo']['settings'] = array(
-    'image_style' => 'large',
+    'image_style' => 'width250px',
     'image_link' => 'content',
   );
   /* Sort criterion: Content: Post date */
@@ -453,18 +449,12 @@ function sponsor_views_default_views() {
   $handler->display->display_options['filters']['field_sponsor_type_value']['table'] = 'field_data_field_sponsor_type';
   $handler->display->display_options['filters']['field_sponsor_type_value']['field'] = 'field_sponsor_type_value';
   $handler->display->display_options['filters']['field_sponsor_type_value']['value'] = array(
-    'gold' => 'gold',
+    'graphics' => 'graphics',
   );
 
   /* Display: diamond */
   $handler = $view->new_display('page', 'diamond', 'page');
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Header: Global: PHP */
-  $handler->display->display_options['header']['php']['id'] = 'php';
-  $handler->display->display_options['header']['php']['table'] = 'views';
-  $handler->display->display_options['header']['php']['field'] = 'php';
-  $handler->display->display_options['header']['php']['empty'] = TRUE;
-  $handler->display->display_options['header']['php']['php_output'] = '<p>With our proposal we would like to encourage you to help with organization of the third conference in Poland devoted to CMS Drupal. We believe that the event will attract many experts, at the same time allowing you to promote your own business. <a href="http://www.drupalcampwroclaw.pl/downloadfiles/sponsorship_offer.pdf">Click here to download Sponsorship offer in PDF</a></p>';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Sponsor website */
   $handler->display->display_options['fields']['field_sponsor_website']['id'] = 'field_sponsor_website';
@@ -878,6 +868,47 @@ function sponsor_views_default_views() {
     'default' => 0,
   );
   $handler->display->display_options['attachment_position'] = 'after';
+
+  /* Display: Graphics */
+  $handler = $view->new_display('attachment', 'Graphics', 'attachment_6');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+  );
+  $handler->display->display_options['attachment_position'] = 'after';
+
+  /* Display: Prize */
+  $handler = $view->new_display('attachment', 'Prize', 'attachment_7');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'sponsor' => 'sponsor',
+  );
+  /* Filter criterion: Content: Sponsor Type (field_sponsor_type) */
+  $handler->display->display_options['filters']['field_sponsor_type_value']['id'] = 'field_sponsor_type_value';
+  $handler->display->display_options['filters']['field_sponsor_type_value']['table'] = 'field_data_field_sponsor_type';
+  $handler->display->display_options['filters']['field_sponsor_type_value']['field'] = 'field_sponsor_type_value';
+  $handler->display->display_options['filters']['field_sponsor_type_value']['value'] = array(
+    'prize' => 'prize',
+  );
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+  );
+  $handler->display->display_options['attachment_position'] = 'after';
   $translatables['sponsors_page'] = array(
     t('Master'),
     t('Sponsors'),
@@ -893,6 +924,8 @@ function sponsor_views_default_views() {
     t('silver'),
     t('bronze'),
     t('party'),
+    t('Graphics'),
+    t('Prize'),
   );
   $export['sponsors_page'] = $view;
 
