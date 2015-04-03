@@ -71,7 +71,7 @@ function sponsor_field_default_field_bases() {
         'gold' => 'Gold',
         'silver' => 'Silver',
         'bronze' => 'Bronze',
-        'graphics' => 'Graphics',
+        'graphics' => 'Graphics sponsor',
         'prize' => 'Prize',
         'party' => 'Drupal night',
       ),

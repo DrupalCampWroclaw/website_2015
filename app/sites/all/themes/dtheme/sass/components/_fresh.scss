@@ -9,7 +9,6 @@ $max-page-width: $width-page;
  * Styles.
  */
 
-
 #page-bottom-links,
 #main,
 #header {
@@ -22,25 +21,24 @@ $max-page-width: $width-page;
 
 }
 
-#site-name{
+#site-name {
   padding: 0.25em 1em;
 }
 
-.sidebars{
-   @media (max-width: 480px) {
+.sidebars {
+  @media (max-width: 480px) {
     padding-top: 1em;
-    clear: both;
-   }
-}
-
-
-@media (max-width: 768px) {
-  .sidebars .block{
     clear: both;
   }
 }
 
-#page-title{
+@media (max-width: 768px) {
+  .sidebars .block {
+    clear: both;
+  }
+}
+
+#page-title {
   color: $red1;
   font-family: $bree;
   font-size: 48px;
@@ -49,7 +47,7 @@ $max-page-width: $width-page;
   padding-bottom: 20px;
 }
 
-.view-bannerslider{
+.view-bannerslider {
   ul {
     padding: 0;
     margin: 0;
@@ -66,11 +64,9 @@ $max-page-width: $width-page;
 
 /** ---------------------------------  */
 
-
-
-#main{
+#main {
   padding-top: 1em;
-  #content{
+  #content {
     background: $bg1;
     min-height: 30em;
 
@@ -106,16 +102,16 @@ $max-page-width: $width-page;
       background: url("../images/header_bg_1.png") 0 0 repeat;
       font-family: $bree;
       font-weight: 400;
-      @media only screen and (min-width : $screen-mobile-mid ) and (max-width: $screen-tablet-min) {
+      @media only screen and (min-width: $screen-mobile-mid) and (max-width: $screen-tablet-min) {
         font-size: 14px;
       }
     }
   }
 }
 
-#footer{
+#footer {
   margin-top: 1em;
-  #block-block-1{
+  #block-block-1 {
     float: left;
     width: 100%;
     overflow: hidden;
@@ -129,7 +125,7 @@ $max-page-width: $width-page;
 
 /* node */
 
-.submitted{
+.submitted {
   color: $grey2;
   font-size: 0.9em;
 }
@@ -141,19 +137,19 @@ $max-page-width: $width-page;
 }
 
 .node-news.node-teaser {
-  .field-name-field-news-image{
+  .field-name-field-news-image {
     float: left;
     margin: 0 1em 1em 0;
   }
 
-  ul.links{
+  ul.links {
     clear: both;
     float: right;
   }
 }
 
 .node-news.view-mode-full {
-  .field-name-field-news-image{
+  .field-name-field-news-image {
     float: left;
     margin: 0 1em 1em 0;
   }
@@ -167,18 +163,14 @@ $max-page-width: $width-page;
   }
 }
 
-
-
-#page-bottom-links-over{
+#page-bottom-links-over {
   margin-top: 1em;
   text-align: center;
 }
 
 #block-layout-social-facebook-gplus-twitter {
 
-
-  #social-media-widgets{
-
+  #social-media-widgets {
 
     .social-media {
       padding-top: 1em;
@@ -186,7 +178,7 @@ $max-page-width: $width-page;
       overflow: hidden;
     }
 
-   @media all and (min-width: 960px) {
+    @media all and (min-width: 960px) {
       #social-media-twitter {
         width: 33.3%;
         float: left;
@@ -195,7 +187,7 @@ $max-page-width: $width-page;
         width: 33.3%;
         float: left;
       }
-      #social-media-fb{
+      #social-media-fb {
         width: 33.3%;
         float: left;
       }
@@ -211,13 +203,12 @@ $max-page-width: $width-page;
     width: 100%;
     text-align: center;
   }
-  .flickr_badge_image{
+  .flickr_badge_image {
     /* float: left; */
     display: inline;
   }
   #flickr_badge_source {
     clear: both;
-
 
     text-align: center;
   }
@@ -230,13 +221,13 @@ $max-page-width: $width-page;
     display: block;
 
   }
-  .flag-wrapper{
+  .flag-wrapper {
     font-weight: bold;
   }
 }
 
 .node-sponsor.view-mode-full {
-  .field-name-field-sponsor-logo{
+  .field-name-field-sponsor-logo {
     border: 1px solid $grey3;
 
   }
@@ -253,12 +244,12 @@ $max-page-width: $width-page;
   header p {
     margin: 0;;
   }
-  .field p{
+  .field p {
     margin: 0.5em 0;
   }
 }
 
-.view-sponsors-page{
+.view-sponsors-page {
   text-align: center;
   h3 {
     color: $red1;
@@ -270,98 +261,103 @@ $max-page-width: $width-page;
 
   @media (min-width: 768px) {
 
-
-
-    .views-row{
+    .views-row {
       display: inline-block;
       width: 50%;
       text-align: center;
     }
 
     // Gold
-    .view-display-id-attachment_2{
-      .views-row{
+    .view-display-id-attachment_2 {
+      .views-row {
         width: 33%;
       }
     }
     // Gold
-    .view-display-id-attachment_3{
-      .views-row{
+    .view-display-id-attachment_3 {
+      .views-row {
         width: 33%;
       }
     }
     // Gold
-    .view-display-id-attachment_4{
-      .views-row{
+    .view-display-id-attachment_4 {
+      .views-row {
         width: 25%;
       }
     }
     // Gold
-    .view-display-id-attachment_5{
-      .views-row{
+    .view-display-id-attachment_5 {
+      .views-row {
         width: 100%;
       }
     }
     // Graphics
-    .view-display-id-attachment_6{
-      .views-row{
+    .view-display-id-attachment_6 {
+      .views-row {
         width: 33%;
       }
     }
     // Prize
-    .view-display-id-attachment_7{
-      .views-row{
+    .view-display-id-attachment_7 {
+      .views-row {
         width: 33%
       }
     }
   }
 }
 
-#footer-inner{
+#footer-inner {
   .block {
     width: 100%;
     clear: both;
     float: left;
   }
 }
+
 .view-id-sponsors_frontpage_block {
   text-align: center;
 }
-.view-id-sponsors_frontpage_block.view-display-id-block{
 
-  .views-row{
+.view-id-sponsors_frontpage_block.view-display-id-block {
+
+  .views-row {
     float: left;
     width: 50%;
+    &.views-row-first {
+      &.views-row-last {
+        float: none;
+        width: 100%;
+      }
+    }
   }
 }
 
 .view-id-sponsors_frontpage_block.view-display-id-block_1 {
-  .views-row{
+  .views-row {
     float: left;
     width: 50%;
   }
 }
 
 .view-id-sponsors_frontpage_block.view-display-id-block_2 {
-  .views-row{
+  .views-row {
     float: left;
     width: 33%;
   }
 }
 
-.view-sponsors-diamond-block{
+.view-sponsors-diamond-block {
   text-align: center;
-  .view-footer{
+  .view-footer {
     margin-top: 1em;
   }
 }
-
 
 .profile .user-picture {
   float: none;
 }
 
-.page-jobs{
+.page-jobs {
   #content {
     table {
       td {
@@ -371,17 +367,14 @@ $max-page-width: $width-page;
   }
 }
 
-
 .view-sessions-accepted-calendar {
   .pager {
     display: none;
   }
 
-
-
   .calendar-agenda-items,
   .calendar-agenda-items,
-  .calendar-dayview-hour{
+  .calendar-dayview-hour {
 
   }
 
@@ -399,23 +392,23 @@ $max-page-width: $width-page;
 
       .multi-day,
       .calendar-agenda-hour,
-      .calendar-dayview-hour{
+      .calendar-dayview-hour {
         display: none;
       }
 
-      .date-display-single{
+      .date-display-single {
         font-weight: bold;
         font-size: 1.2em;
         color: $red1;
       }
 
-      .views-field.views-field-field-session-speakers{
+      .views-field.views-field-field-session-speakers {
         a {
           color: $grey2;
         }
       }
 
-      .views-field.views-field-title{
+      .views-field.views-field-title {
         font-size: 1.2em;
       }
 
