@@ -223,7 +223,7 @@ function application_update_7031() {
  * Update 2015-01-24
  */
 function application_update_7032() {
-  module_enable(array('entity_translate', 'title'));
+  module_enable(array('entity_translation', 'title'));
   drupal_flush_all_caches();
   application_api_features_revert(application_features_list()); // Try to revert Page feature. Don't work in first revert.
 
@@ -234,7 +234,7 @@ function application_update_7032() {
 
   //Create featured speakers
   $users = array('12', '14', '21');
-  foreach ($users as $user){
+  foreach ($users as $user) {
     $user = user_load($user);
     $user->field_user_category['und'][0]['value'] = 'featured';
     user_save($user);
@@ -535,8 +535,27 @@ function application_update_7038() {
 /**
  * Update 2015-04-03.
  */
-
 function application_update_7039() {
+  drupal_flush_all_caches();
+  application_api_features_revert(application_features_list());
+}
+
+/**
+ * Update 2015-04-15.
+ */
+
+function application_update_7040() {
+  drupal_flush_all_caches();
+  module_load_include('inc', 'application', 'includes/7040_tshirt_sizes_term');
+  application_7040_tshirt_sizes_term();
+
+  variable_set('session_voting_end_date', '2015-05-15');
+}
+
+/**
+ * Update 2015-04-17.
+ */
+function application_update_7041() {
   drupal_flush_all_caches();
   application_api_features_revert(application_features_list());
 }

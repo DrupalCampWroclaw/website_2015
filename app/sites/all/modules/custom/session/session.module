@@ -7,12 +7,41 @@
 include_once 'session.features.inc';
 
 /**
+ * Implements hook_permission().
+ */
+function session_permission() {
+  return array(
+    'administer session' => array(
+      'title' => t('administer session'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function session_menu() {
+  $items = array();
+  // Placeholder for application project page.
+  $items['admin/application/session-settings'] = array(
+    'title' => 'Session settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('session_admin_form'),
+    'file' => 'session.admin.inc',
+    'access arguments' => array('administer session'),
+    'type' => MENU_NORMAL_ITEM,
+    'weight' => 50,
+  );
+  return $items;
+}
+
+/**
  * Implements hook_form_alter();
  */
 function session_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'session_node_form') {
     // Disable session submit after end date.
-    if (REQUEST_TIME > strtotime(variable_get('session_end_date', '2015-04-30')) && !user_access('administer application') && arg(1) == 'add') {
+    if (REQUEST_TIME > strtotime(variable_get('session_submit_end_date', '2015-04-30')) && !user_access('administer application') && arg(1) == 'add') {
       drupal_set_message(t('Submitting session is no longer possible.'));
       drupal_goto('<front>');
     }

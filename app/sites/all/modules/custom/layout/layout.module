@@ -63,8 +63,31 @@ function layout_block_view($delta = '') {
       $block['content'] = theme('flickr');
       break;
     case 'sessions':
+
+      $timestamp_now = REQUEST_TIME;
+      $timestamp_voting_end = strtotime(variable_get('session_voting_end_date', '2015-05-15'));
+
+      if ($timestamp_now > $timestamp_voting_end) {
+        $is_session_voting_active = FALSE;
+      }
+      else {
+        $is_session_voting_active = TRUE;
+      }
+
+      $session_video_link_show_date = strtotime(variable_get('session_video_link_show_date', '2015-05-25'));
+      if ($timestamp_now > $session_video_link_show_date) {
+        $is_video_link_active = TRUE;
+      }
+      else {
+        $is_video_link_active = FALSE;
+      }
+
       $block['subject'] = t('Sessions');
-      $block['content'] = theme('sessions');
+      $block['content'] = theme('sessions', array(
+        'is_session_voting_active' => $is_session_voting_active,
+        'is_video_link_active' => $is_video_link_active,
+        )
+      );
       break;
     case 'frontpage_top':
       $block['subject'] = '';
@@ -92,7 +115,10 @@ function layout_theme($existing, $type, $theme, $path) {
       'template' => 'flickr',
     ),
     'sessions' => array(
-      'variables' => array(),
+      'variables' => array(
+        'is_session_voting_active' => NULL,
+        'is_video_link_active' => NULL,
+      ),
       'template' => 'sessions',
     ),
   );

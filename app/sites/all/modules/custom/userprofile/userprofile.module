@@ -10,13 +10,16 @@ include_once 'userprofile.features.inc';
  * Implements hook_form_alter().
  */
 function userprofile_form_alter(&$form, &$form_state, $form_id) {
+
   switch ($form_id) {
     case 'user_profile_form':
+    case 'user_register_form':
       drupal_add_js(drupal_get_path('module', 'userprofile') . '/js/script.js');
+      $form['#validate'][] = 'userprofile_tshirt_size_validate';
       break;
   }
-}
 
+}
 
 /**
  * Social links in header of page.
@@ -59,4 +62,20 @@ function userprofile_header_bar() {
     ));
 
   return $output;
+}
+
+/**
+ * Validate tshirt_size
+ *
+ */
+function userprofile_tshirt_size_validate($form, &$form_state) {
+
+  $bad_value = taxonomy_get_term_by_name('Men');
+  $bad_value2 = taxonomy_get_term_by_name('Women');
+  $size = $form_state['values']['field_user_tshirt_size']['en'][0]['tid'];
+
+  if ($size == key($bad_value) || $size == key($bad_value2)) {
+    form_set_error('field_user_tshirt_size', t('Please select a correct T-shirt size value.'));
+  }
+
 }

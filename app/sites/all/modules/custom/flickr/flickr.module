@@ -124,7 +124,7 @@ function flickr_gallery_build($json) {
 function flickr_contents($delta = '') {
   switch ($delta) {
     case 'flickr':
-      $flickr_info = t(variable_get('flickr_info'));
+      $flickr_info = variable_get('flickr_info');
       break;
   }
   return $flickr_info;

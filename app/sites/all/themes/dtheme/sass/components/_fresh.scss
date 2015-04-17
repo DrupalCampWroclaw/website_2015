@@ -263,8 +263,19 @@ $max-page-width: $width-page;
 
     .views-row {
       display: inline-block;
-      width: 50%;
+      width: 49%;
       text-align: center;
+      height: 150px;
+      position: relative;
+
+      .views-field-field-sponsor-logo {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+      }
+
     }
 
     // Gold

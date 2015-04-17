@@ -1209,129 +1209,139 @@ table {
   /* line 264, ../sass/components/_fresh.scss */
   .view-sponsors-page .views-row {
     display: inline-block;
-    width: 50%;
+    width: 49%;
     text-align: center;
+    height: 150px;
+    position: relative;
   }
-  /* line 272, ../sass/components/_fresh.scss */
+  /* line 271, ../sass/components/_fresh.scss */
+  .view-sponsors-page .views-row .views-field-field-sponsor-logo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  /* line 283, ../sass/components/_fresh.scss */
   .view-sponsors-page .view-display-id-attachment_2 .views-row {
     width: 33%;
   }
-  /* line 278, ../sass/components/_fresh.scss */
+  /* line 289, ../sass/components/_fresh.scss */
   .view-sponsors-page .view-display-id-attachment_3 .views-row {
     width: 33%;
   }
-  /* line 284, ../sass/components/_fresh.scss */
+  /* line 295, ../sass/components/_fresh.scss */
   .view-sponsors-page .view-display-id-attachment_4 .views-row {
     width: 25%;
   }
-  /* line 290, ../sass/components/_fresh.scss */
+  /* line 301, ../sass/components/_fresh.scss */
   .view-sponsors-page .view-display-id-attachment_5 .views-row {
     width: 100%;
   }
-  /* line 296, ../sass/components/_fresh.scss */
+  /* line 307, ../sass/components/_fresh.scss */
   .view-sponsors-page .view-display-id-attachment_6 .views-row {
     width: 33%;
   }
-  /* line 302, ../sass/components/_fresh.scss */
+  /* line 313, ../sass/components/_fresh.scss */
   .view-sponsors-page .view-display-id-attachment_7 .views-row {
     width: 33%;
   }
 }
 
-/* line 310, ../sass/components/_fresh.scss */
+/* line 321, ../sass/components/_fresh.scss */
 #footer-inner .block {
   width: 100%;
   clear: both;
   float: left;
 }
 
-/* line 317, ../sass/components/_fresh.scss */
+/* line 328, ../sass/components/_fresh.scss */
 .view-id-sponsors_frontpage_block {
   text-align: center;
 }
 
-/* line 323, ../sass/components/_fresh.scss */
+/* line 334, ../sass/components/_fresh.scss */
 .view-id-sponsors_frontpage_block.view-display-id-block .views-row {
   float: left;
   width: 50%;
 }
-/* line 327, ../sass/components/_fresh.scss */
+/* line 338, ../sass/components/_fresh.scss */
 .view-id-sponsors_frontpage_block.view-display-id-block .views-row.views-row-first.views-row-last {
   float: none;
   width: 100%;
 }
 
-/* line 336, ../sass/components/_fresh.scss */
+/* line 347, ../sass/components/_fresh.scss */
 .view-id-sponsors_frontpage_block.view-display-id-block_1 .views-row {
   float: left;
   width: 50%;
 }
 
-/* line 343, ../sass/components/_fresh.scss */
+/* line 354, ../sass/components/_fresh.scss */
 .view-id-sponsors_frontpage_block.view-display-id-block_2 .views-row {
   float: left;
   width: 33%;
 }
 
-/* line 349, ../sass/components/_fresh.scss */
+/* line 360, ../sass/components/_fresh.scss */
 .view-sponsors-diamond-block {
   text-align: center;
 }
-/* line 351, ../sass/components/_fresh.scss */
+/* line 362, ../sass/components/_fresh.scss */
 .view-sponsors-diamond-block .view-footer {
   margin-top: 1em;
 }
 
-/* line 356, ../sass/components/_fresh.scss */
+/* line 367, ../sass/components/_fresh.scss */
 .profile .user-picture {
   float: none;
 }
 
-/* line 363, ../sass/components/_fresh.scss */
+/* line 374, ../sass/components/_fresh.scss */
 .page-jobs #content table td {
   width: 50%;
 }
 
-/* line 371, ../sass/components/_fresh.scss */
+/* line 382, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .pager {
   display: none;
 }
-/* line 384, ../sass/components/_fresh.scss */
+/* line 395, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table th {
   background: #007aac;
   color: white;
 }
-/* line 389, ../sass/components/_fresh.scss */
+/* line 400, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table td {
   width: 50%;
 }
-/* line 393, ../sass/components/_fresh.scss */
+/* line 404, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table .multi-day,
 .view-sessions-accepted-calendar .calendar-calendar table .calendar-agenda-hour,
 .view-sessions-accepted-calendar .calendar-calendar table .calendar-dayview-hour {
   display: none;
 }
-/* line 399, ../sass/components/_fresh.scss */
+/* line 410, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table .date-display-single {
   font-weight: bold;
   font-size: 1.2em;
   color: #eb4e3a;
 }
-/* line 406, ../sass/components/_fresh.scss */
+/* line 417, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table .views-field.views-field-field-session-speakers a {
   color: #a5a4a4;
 }
-/* line 411, ../sass/components/_fresh.scss */
+/* line 422, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table .views-field.views-field-title {
   font-size: 1.2em;
 }
-/* line 415, ../sass/components/_fresh.scss */
+/* line 426, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table .calendar.dayview,
 .view-sessions-accepted-calendar .calendar-calendar table td.single-day div.dayview,
 .view-sessions-accepted-calendar .calendar-calendar table td .inner div, .view-sessions-accepted-calendar .calendar-calendar table .calendar-calendar td .inner div a {
   background: white !important;
 }
-/* line 421, ../sass/components/_fresh.scss */
+/* line 432, ../sass/components/_fresh.scss */
 .view-sessions-accepted-calendar .calendar-calendar table td.single-day div.dayview {
   background: white;
   width: auto;
@@ -2189,7 +2199,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1427967917');
+  background-image: url('../images/progress.gif?1425371409');
 }
 
 /* line 1, ../sass/components/_table.scss */
@@ -3215,7 +3225,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #eb4e3a;
   text-align: right;
 }
-/* line 38, ../../../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
 .view-news-frontpage .views-row .node-news.node-teaser ul.links:after {
   content: "";
   display: table;

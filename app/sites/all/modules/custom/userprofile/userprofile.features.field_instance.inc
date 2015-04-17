@@ -10,6 +10,43 @@
 function userprofile_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'taxonomy_term-tshirt_sizes-name_field'
+  $field_instances['taxonomy_term-tshirt_sizes-name_field'] = array(
+    'bundle' => 'tshirt_sizes',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_attendance'
   $field_instances['user-user-field_attendance'] = array(
     'bundle' => 'user',
@@ -249,14 +286,47 @@ function userprofile_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_user_tshirt_size'
+  $field_instances['user-user-field_user_tshirt_size'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_user_tshirt_size',
+    'label' => 'T-shirt size',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 53,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('About me');
   t('First name');
   t('Job title');
   t('Last name');
+  t('Name');
   t('Organization');
   t('Planned attendance');
+  t('T-shirt size');
   t('User category');
 
   return $field_instances;
