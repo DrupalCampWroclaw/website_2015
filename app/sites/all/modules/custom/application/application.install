@@ -546,8 +546,8 @@ function application_update_7039() {
 
 function application_update_7040() {
   drupal_flush_all_caches();
-  module_load_include('inc', 'application', 'includes/7040_tshirt_sizes_term');
-  application_7040_tshirt_sizes_term();
+  //module_load_include('inc', 'application', 'includes/7040_tshirt_sizes_term');
+  //application_7040_tshirt_sizes_term();
 
   variable_set('session_voting_end_date', '2015-05-15');
 }
