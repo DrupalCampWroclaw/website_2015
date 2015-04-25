@@ -18,7 +18,7 @@ function userprofile_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_attendance',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'foreign keys' => array(),
     'indexes' => array(
@@ -38,7 +38,7 @@ function userprofile_field_default_field_bases() {
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,
     ),
-    'translatable' => 0,
+    'translatable' => 1,
     'type' => 'list_text',
   );
 

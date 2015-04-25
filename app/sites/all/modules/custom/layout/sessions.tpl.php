@@ -1,10 +1,16 @@
 <div id="sessions-links">
   <ul>
 
-    <?php if($is_session_voting_active):?>
+    <?php if($is_session_submit_active):?>
       <li><?php print l(t('Submit a Session'), 'node/add/session'); ?></li>
       <li><?php print l(t('Proposed Sessions'), 'sessions/proposed'); ?></li>
-    <?php else: ?>
+    <?php endif; ?>
+
+    <?php if(!$is_session_submit_active && $is_session_voting_active):?>
+      <li><?php print l(t('Proposed Sessions'), 'sessions/proposed'); ?></li>
+    <?php endif; ?>
+
+    <?php if(!$is_session_submit_active && !$is_session_voting_active):?>
       <li><?php print l(t('Accepted Sessions'), 'sessions/accepted'); ?></li>
       <li><?php print l(t('Proposed Sessions'), 'sessions/proposed'); ?></li>
     <?php endif; ?>

@@ -34,45 +34,45 @@ function userprofile_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: File Usage: Plik */
+  /* Relationship: File Usage: File */
   $handler->display->display_options['relationships']['user_to_file']['id'] = 'user_to_file';
   $handler->display->display_options['relationships']['user_to_file']['table'] = 'file_usage';
   $handler->display->display_options['relationships']['user_to_file']['field'] = 'user_to_file';
-  /* Pole: Użytkownik: Obraz */
+  /* Field: User: Picture */
   $handler->display->display_options['fields']['picture']['id'] = 'picture';
   $handler->display->display_options['fields']['picture']['table'] = 'users';
   $handler->display->display_options['fields']['picture']['field'] = 'picture';
   $handler->display->display_options['fields']['picture']['label'] = '';
   $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
-  /* Pole: Użytkownik: Nazwa */
+  /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  /* Pole: Użytkownik: First name */
+  /* Field: User: First name */
   $handler->display->display_options['fields']['field_user_first_name']['id'] = 'field_user_first_name';
   $handler->display->display_options['fields']['field_user_first_name']['table'] = 'field_data_field_user_first_name';
   $handler->display->display_options['fields']['field_user_first_name']['field'] = 'field_user_first_name';
   $handler->display->display_options['fields']['field_user_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_user_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_user_first_name']['element_label_colon'] = FALSE;
-  /* Pole: Użytkownik: Last name */
+  /* Field: User: Last name */
   $handler->display->display_options['fields']['field_user_last_name']['id'] = 'field_user_last_name';
   $handler->display->display_options['fields']['field_user_last_name']['table'] = 'field_data_field_user_last_name';
   $handler->display->display_options['fields']['field_user_last_name']['field'] = 'field_user_last_name';
   $handler->display->display_options['fields']['field_user_last_name']['label'] = '';
   $handler->display->display_options['fields']['field_user_last_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_user_last_name']['element_label_colon'] = FALSE;
-  /* Pole: Użytkownik: Organization */
+  /* Field: User: Organization */
   $handler->display->display_options['fields']['field_user_organization']['id'] = 'field_user_organization';
   $handler->display->display_options['fields']['field_user_organization']['table'] = 'field_data_field_user_organization';
   $handler->display->display_options['fields']['field_user_organization']['field'] = 'field_user_organization';
   $handler->display->display_options['fields']['field_user_organization']['label'] = '';
   $handler->display->display_options['fields']['field_user_organization']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_user_organization']['element_label_colon'] = FALSE;
-  /* Pole: Global: Custom text */
+  /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -80,25 +80,25 @@ function userprofile_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<p>[field_user_first_name] [field_user_last_name]</p>
 <p>[field_user_organization]</p>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Sort criterion: Plik: Upload date */
+  /* Sort criterion: File: Upload date */
   $handler->display->display_options['sorts']['timestamp']['id'] = 'timestamp';
   $handler->display->display_options['sorts']['timestamp']['table'] = 'file_managed';
   $handler->display->display_options['sorts']['timestamp']['field'] = 'timestamp';
   $handler->display->display_options['sorts']['timestamp']['relationship'] = 'user_to_file';
   $handler->display->display_options['sorts']['timestamp']['order'] = 'DESC';
-  /* Sort criterion: Użytkownik: Created date */
+  /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'users';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Użytkownik: Aktywne */
+  /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Użytkownik: Nazwa */
+  /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
   $handler->display->display_options['filters']['uid']['field'] = 'uid';
@@ -110,20 +110,20 @@ function userprofile_views_default_views() {
   /* Display: Attendees */
   $handler = $view->new_display('page', 'Attendees', 'page');
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: File Usage: Plik */
+  /* Relationship: File Usage: File */
   $handler->display->display_options['relationships']['user_to_file']['id'] = 'user_to_file';
   $handler->display->display_options['relationships']['user_to_file']['table'] = 'file_usage';
   $handler->display->display_options['relationships']['user_to_file']['field'] = 'user_to_file';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Użytkownik: Aktywne */
+  /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Użytkownik: Nazwa */
+  /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
   $handler->display->display_options['filters']['uid']['field'] = 'uid';
@@ -139,14 +139,14 @@ function userprofile_views_default_views() {
   $handler->display->display_options['title'] = 'Speakers';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Użytkownik: Aktywne */
+  /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Użytkownik: Nazwa */
+  /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
   $handler->display->display_options['filters']['uid']['field'] = 'uid';
@@ -154,7 +154,7 @@ function userprofile_views_default_views() {
   $handler->display->display_options['filters']['uid']['value'] = array(
     0 => '1',
   );
-  /* Filter criterion: Użytkownik: Role */
+  /* Filter criterion: User: Roles */
   $handler->display->display_options['filters']['rid']['id'] = 'rid';
   $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
   $handler->display->display_options['filters']['rid']['field'] = 'rid';
@@ -168,20 +168,20 @@ function userprofile_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Team';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: File Usage: Plik */
+  /* Relationship: File Usage: File */
   $handler->display->display_options['relationships']['user_to_file']['id'] = 'user_to_file';
   $handler->display->display_options['relationships']['user_to_file']['table'] = 'file_usage';
   $handler->display->display_options['relationships']['user_to_file']['field'] = 'user_to_file';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Użytkownik: Aktywne */
+  /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Użytkownik: Nazwa */
+  /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
   $handler->display->display_options['filters']['uid']['field'] = 'uid';
@@ -189,7 +189,7 @@ function userprofile_views_default_views() {
   $handler->display->display_options['filters']['uid']['value'] = array(
     0 => '1',
   );
-  /* Filter criterion: Użytkownik: Role */
+  /* Filter criterion: User: Roles */
   $handler->display->display_options['filters']['rid']['id'] = 'rid';
   $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
   $handler->display->display_options['filters']['rid']['field'] = 'rid';
@@ -208,14 +208,14 @@ function userprofile_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Użytkownik: Aktywne */
+  /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Użytkownik: Nazwa */
+  /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
   $handler->display->display_options['filters']['uid']['field'] = 'uid';
@@ -223,7 +223,7 @@ function userprofile_views_default_views() {
   $handler->display->display_options['filters']['uid']['value'] = array(
     0 => '1',
   );
-  /* Filter criterion: Użytkownik: User category (field_user_category) */
+  /* Filter criterion: User: User category (field_user_category) */
   $handler->display->display_options['filters']['field_user_category_value']['id'] = 'field_user_category_value';
   $handler->display->display_options['filters']['field_user_category_value']['table'] = 'field_data_field_user_category';
   $handler->display->display_options['filters']['field_user_category_value']['field'] = 'field_user_category_value';
@@ -239,10 +239,11 @@ function userprofile_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Plik'),
+    t('File'),
     t('<p>[field_user_first_name] [field_user_last_name]</p>
 <p>[field_user_organization]</p>'),
     t('Attendees'),
+    t('more'),
     t('Speakers'),
     t('Team'),
     t('Featured speakers'),
@@ -303,6 +304,20 @@ function userprofile_views_default_views() {
     ),
   );
   $handler->display->display_options['style_options']['override'] = FALSE;
+  /* Footer: Global: PHP */
+  $handler->display->display_options['footer']['php']['id'] = 'php';
+  $handler->display->display_options['footer']['php']['table'] = 'views';
+  $handler->display->display_options['footer']['php']['field'] = 'php';
+  $handler->display->display_options['footer']['php']['php_output'] = '<?php
+$sum = array();
+$num_values = count($results);
+for ($i = 0; $i < $num_values; $i++) {
+  $value = $results[$i]->field_data_field_user_tshirt_size_delta;
+  array_push($sum, $value);
+}
+echo "Łącznie koszulek: " . array_sum($sum);
+?>
+';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -310,7 +325,7 @@ function userprofile_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'No results yet.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
-  /* Pole: Global: PHP */
+  /* Field: Global: PHP */
   $handler->display->display_options['fields']['php']['id'] = 'php';
   $handler->display->display_options['fields']['php']['table'] = 'views';
   $handler->display->display_options['fields']['php']['field'] = 'php';
@@ -327,7 +342,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
 ?>';
   $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
-  /* Pole: Użytkownik: T-shirt size */
+  /* Field: User: T-shirt size */
   $handler->display->display_options['fields']['field_user_tshirt_size']['id'] = 'field_user_tshirt_size';
   $handler->display->display_options['fields']['field_user_tshirt_size']['table'] = 'field_data_field_user_tshirt_size';
   $handler->display->display_options['fields']['field_user_tshirt_size']['field'] = 'field_user_tshirt_size';
@@ -338,14 +353,14 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
   $handler->display->display_options['fields']['field_user_tshirt_size']['group_columns'] = array(
     'tid' => 'tid',
   );
-  /* Pole: COUNT(Użytkownik: T-shirt size) */
+  /* Field: COUNT(User: T-shirt size) */
   $handler->display->display_options['fields']['field_user_tshirt_size_1']['id'] = 'field_user_tshirt_size_1';
   $handler->display->display_options['fields']['field_user_tshirt_size_1']['table'] = 'field_data_field_user_tshirt_size';
   $handler->display->display_options['fields']['field_user_tshirt_size_1']['field'] = 'field_user_tshirt_size';
   $handler->display->display_options['fields']['field_user_tshirt_size_1']['group_type'] = 'count';
   $handler->display->display_options['fields']['field_user_tshirt_size_1']['label'] = 'Number of T-shirts';
   $handler->display->display_options['fields']['field_user_tshirt_size_1']['separator'] = ', ';
-  /* Filter criterion: STDDEV_POP(Użytkownik: T-shirt size (field_user_tshirt_size)) */
+  /* Filter criterion: STDDEV_POP(User: T-shirt size (field_user_tshirt_size)) */
   $handler->display->display_options['filters']['field_user_tshirt_size_tid']['id'] = 'field_user_tshirt_size_tid';
   $handler->display->display_options['filters']['field_user_tshirt_size_tid']['table'] = 'field_data_field_user_tshirt_size';
   $handler->display->display_options['filters']['field_user_tshirt_size_tid']['field'] = 'field_user_tshirt_size_tid';
@@ -375,6 +390,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
     t('[php]/[field_user_tshirt_size]'),
     t('Number of T-shirts'),
     t('Page'),
+    t('more'),
   );
   $export['tshirts'] = $view;
 
@@ -460,47 +476,47 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
       'empty_column' => 0,
     ),
   );
-  /* Pole: Bulk operations: Użytkownik */
+  /* Field: Bulk operations: User */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'users';
   $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
-  /* Pole: Użytkownik: Uid */
+  /* Field: User: Uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'users';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
-  /* Pole: Użytkownik: Nazwa */
+  /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  /* Pole: Użytkownik: Last name */
+  /* Field: User: Last name */
   $handler->display->display_options['fields']['field_user_last_name']['id'] = 'field_user_last_name';
   $handler->display->display_options['fields']['field_user_last_name']['table'] = 'field_data_field_user_last_name';
   $handler->display->display_options['fields']['field_user_last_name']['field'] = 'field_user_last_name';
-  /* Pole: Użytkownik: First name */
+  /* Field: User: First name */
   $handler->display->display_options['fields']['field_user_first_name']['id'] = 'field_user_first_name';
   $handler->display->display_options['fields']['field_user_first_name']['table'] = 'field_data_field_user_first_name';
   $handler->display->display_options['fields']['field_user_first_name']['field'] = 'field_user_first_name';
-  /* Pole: Użytkownik: E-mail */
+  /* Field: User: E-mail */
   $handler->display->display_options['fields']['mail']['id'] = 'mail';
   $handler->display->display_options['fields']['mail']['table'] = 'users';
   $handler->display->display_options['fields']['mail']['field'] = 'mail';
-  /* Pole: Użytkownik: Organization */
+  /* Field: User: Organization */
   $handler->display->display_options['fields']['field_user_organization']['id'] = 'field_user_organization';
   $handler->display->display_options['fields']['field_user_organization']['table'] = 'field_data_field_user_organization';
   $handler->display->display_options['fields']['field_user_organization']['field'] = 'field_user_organization';
-  /* Sort criterion: Użytkownik: Last name (field_user_last_name) */
+  /* Sort criterion: User: Last name (field_user_last_name) */
   $handler->display->display_options['sorts']['field_user_last_name_value']['id'] = 'field_user_last_name_value';
   $handler->display->display_options['sorts']['field_user_last_name_value']['table'] = 'field_data_field_user_last_name';
   $handler->display->display_options['sorts']['field_user_last_name_value']['field'] = 'field_user_last_name_value';
-  /* Sort criterion: Użytkownik: Created date */
+  /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'users';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Użytkownik: Aktywne */
+  /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -519,7 +535,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
     4 => 0,
     5 => 0,
   );
-  /* Filter criterion: Użytkownik: E-mail */
+  /* Filter criterion: User: E-mail */
   $handler->display->display_options['filters']['mail']['id'] = 'mail';
   $handler->display->display_options['filters']['mail']['table'] = 'users';
   $handler->display->display_options['filters']['mail']['field'] = 'mail';
@@ -536,7 +552,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
     4 => 0,
     5 => 0,
   );
-  /* Filter criterion: Użytkownik: Nazwa */
+  /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
   $handler->display->display_options['filters']['uid']['field'] = 'uid';
@@ -553,7 +569,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
     4 => 0,
     5 => 0,
   );
-  /* Filter criterion: Użytkownik: Role */
+  /* Filter criterion: User: Roles */
   $handler->display->display_options['filters']['rid']['id'] = 'rid';
   $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
   $handler->display->display_options['filters']['rid']['field'] = 'rid';
@@ -588,7 +604,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Użytkownik'),
+    t('User'),
     t('Uid'),
     t('Last name'),
     t('First name'),
@@ -598,6 +614,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
     t('Nazwa'),
     t('Role'),
     t('Page'),
+    t('more'),
   );
   $export['users_list'] = $view;
 
@@ -624,24 +641,24 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Przywróć';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'table';
-  /* Pole: Użytkownik: Uid */
+  /* Field: User: Uid */
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'users';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
   $handler->display->display_options['fields']['uid']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
-  /* Pole: Użytkownik: Nazwa */
+  /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  /* Pole: Użytkownik: E-mail */
+  /* Field: User: E-mail */
   $handler->display->display_options['fields']['mail']['id'] = 'mail';
   $handler->display->display_options['fields']['mail']['table'] = 'users';
   $handler->display->display_options['fields']['mail']['field'] = 'mail';
   $handler->display->display_options['fields']['mail']['element_default_classes'] = FALSE;
-  /* Pole: Global: PHP */
+  /* Field: Global: PHP */
   $handler->display->display_options['fields']['php']['id'] = 'php';
   $handler->display->display_options['fields']['php']['table'] = 'views';
   $handler->display->display_options['fields']['php']['field'] = 'php';
@@ -658,19 +675,19 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
 ?>';
   $handler->display->display_options['fields']['php']['use_php_click_sortable'] = '0';
   $handler->display->display_options['fields']['php']['php_click_sortable'] = '';
-  /* Pole: Użytkownik: T-shirt size */
+  /* Field: User: T-shirt size */
   $handler->display->display_options['fields']['field_user_tshirt_size']['id'] = 'field_user_tshirt_size';
   $handler->display->display_options['fields']['field_user_tshirt_size']['table'] = 'field_data_field_user_tshirt_size';
   $handler->display->display_options['fields']['field_user_tshirt_size']['field'] = 'field_user_tshirt_size';
   $handler->display->display_options['fields']['field_user_tshirt_size']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_user_tshirt_size']['alter']['text'] = '[php]/[field_user_tshirt_size]';
   $handler->display->display_options['fields']['field_user_tshirt_size']['type'] = 'taxonomy_term_reference_plain';
-  /* Sort criterion: Użytkownik: Created date */
+  /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'users';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Użytkownik: Aktywne */
+  /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -697,11 +714,12 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
     t('Asc'),
     t('Desc'),
     t('Uid'),
-    t('Nazwa'),
+    t('Name'),
     t('E-mail'),
     t('T-shirt size'),
     t('[php]/[field_user_tshirt_size]'),
     t('Page'),
+    t('more'),
   );
   $export['users_tshirts'] = $view;
 
@@ -761,27 +779,27 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
       'empty_column' => 0,
     ),
   );
-  /* Pole: Użytkownik: Nazwa */
+  /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  /* Pole: Użytkownik: E-mail */
+  /* Field: User: E-mail */
   $handler->display->display_options['fields']['mail']['id'] = 'mail';
   $handler->display->display_options['fields']['mail']['table'] = 'users';
   $handler->display->display_options['fields']['mail']['field'] = 'mail';
-  /* Pole: Global: Wyślij e-mail */
+  /* Field: Global: Send e-mail */
   $handler->display->display_options['fields']['views_send']['id'] = 'views_send';
   $handler->display->display_options['fields']['views_send']['table'] = 'views';
   $handler->display->display_options['fields']['views_send']['field'] = 'views_send';
-  /* Sort criterion: Użytkownik: Created date */
+  /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'users';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Użytkownik: Aktywne */
+  /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -800,7 +818,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
     4 => 0,
     5 => 0,
   );
-  /* Filter criterion: Użytkownik: E-mail */
+  /* Filter criterion: User: E-mail */
   $handler->display->display_options['filters']['mail']['id'] = 'mail';
   $handler->display->display_options['filters']['mail']['table'] = 'users';
   $handler->display->display_options['filters']['mail']['field'] = 'mail';
@@ -817,7 +835,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
     4 => 0,
     5 => 0,
   );
-  /* Filter criterion: Użytkownik: Nazwa */
+  /* Filter criterion: User: Name */
   $handler->display->display_options['filters']['uid']['id'] = 'uid';
   $handler->display->display_options['filters']['uid']['table'] = 'users';
   $handler->display->display_options['filters']['uid']['field'] = 'uid';
@@ -834,7 +852,7 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
     4 => 0,
     5 => 0,
   );
-  /* Filter criterion: Użytkownik: Role */
+  /* Filter criterion: User: Roles */
   $handler->display->display_options['filters']['rid']['id'] = 'rid';
   $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
   $handler->display->display_options['filters']['rid']['field'] = 'rid';
@@ -870,11 +888,12 @@ if(isset($data->field_field_user_tshirt_size[0]) && !empty($data->field_field_us
     t('Asc'),
     t('Desc'),
     t('E-mail'),
-    t('Wyślij e-mail'),
+    t('Send e-mail'),
     t('Aktywne'),
     t('Nazwa'),
     t('Role'),
     t('Page'),
+    t('more'),
   );
   $export['views_send_mail'] = $view;
 

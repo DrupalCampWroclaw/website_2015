@@ -5,12 +5,19 @@
     Drupal.behaviors.hide_profile_fields = {
         attach: function(context, settings) {
 
+            var languages = [
+                "en",
+                "pl",
+                "und"
+            ];
 
-            $("input[name='field_attendance[und][no]']").live('click', function(){
+            $.each(languages, function(index, value){
 
-                $('.form-item-field-attendance-und-friday').toggle("slow");
-                $('.form-item-field-attendance-und-saturday').toggle("slow");
-                $('.form-item-field-attendance-und-sunday').toggle("slow");
+            $("input[name='field_attendance[" + value + "][no]']").live('click', function(){
+
+                $('.form-item-field-attendance-'+ value +'-friday').toggle("slow");
+                $('.form-item-field-attendance-'+ value +'-saturday').toggle("slow");
+                $('.form-item-field-attendance-'+ value +'-sunday').toggle("slow");
 
                 $('input:checkbox[value=friday]').attr('checked',false);
                 $('input:checkbox[value=saturday]').attr('checked',false);
@@ -18,13 +25,15 @@
 
             });
 
-            if($("#edit-field-attendance-und-no").is(':checked')) {
+            if($("#edit-field-attendance-"+ value +"-no").is(':checked')) {
 
-                $('.form-item-field-attendance-und-friday').hide();
-                $('.form-item-field-attendance-und-saturday').hide();
-                $('.form-item-field-attendance-und-sunday').hide();
+                $('.form-item-field-attendance-'+ value +'-friday').hide();
+                $('.form-item-field-attendance-'+ value +'-saturday').hide();
+                $('.form-item-field-attendance-'+ value +'-sunday').hide();
 
             }
+
+            });
 
         }
     };

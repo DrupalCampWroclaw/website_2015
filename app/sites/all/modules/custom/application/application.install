@@ -559,3 +559,46 @@ function application_update_7041() {
   drupal_flush_all_caches();
   application_api_features_revert(application_features_list());
 }
+
+/*
+ * Update field_session_type in session nodes.
+ *
+ */
+function application_update_7042() {
+
+  drupal_flush_all_caches();
+  application_api_features_revert(application_features_list());
+
+  $query = new EntityFieldQuery();
+
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', array('session'))
+    ->propertyCondition('status', 1);
+
+  $result = $query->execute();
+
+  if (!empty($result['node'])) {
+    $nids = array_keys($result['node']);
+
+    foreach ($nids as $nid) {
+      $node = node_load($nid);
+      $node->field_session_type[$node->language][0]['value'] = 'lecture';
+      node_save($node);
+    }
+  }
+}
+
+/**
+ * 2015-04-24: Enable MobileApi module.
+ */
+function application_update_7043() {
+  $module_list = array(
+    'mobileapi'
+  );
+  module_enable($module_list);
+  module_list(TRUE, FALSE);
+
+  // Flush caches.
+  drupal_flush_all_caches();
+  application_api_features_revert(application_features_list());
+}
