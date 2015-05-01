@@ -5,6 +5,16 @@
  * Examples demonstrating use json in Drupal.
  */
 
+/**
+ *Implement hook_init().
+ */
+
+function flickr_init() {
+
+  variable_set('flickr_info_en', 'Join to our group on Flickr and add your photos from conference!');
+  variable_set('flickr_info_pl', 'Dołącz do naszej grupy na Flickr i dodaj swoje zdjęcia z konferencji!');
+
+}
 
 /**
  *Implement block_info().
@@ -49,7 +59,7 @@ function flickr_block_configure($delta = '') {
         '#title' => t('Info text'),
         '#size' => 60,
         '#format' => 'full_html',
-        '#default_value' => variable_get('flickr_info'),
+        '#default_value' => variable_get(flickr_info_var_name()),
       );
       break;
   }
@@ -62,7 +72,7 @@ function flickr_block_configure($delta = '') {
 function flickr_block_save($delta = '', $edit = array()) {
   switch ($delta) {
     case 'flickr':
-      variable_set('flickr_info', $edit['flickr_info']);
+      variable_set(flickr_info_var_name(), $edit['flickr_info']);
       break;
   }
 }
@@ -124,8 +134,14 @@ function flickr_gallery_build($json) {
 function flickr_contents($delta = '') {
   switch ($delta) {
     case 'flickr':
-      $flickr_info = variable_get('flickr_info');
+      $flickr_info = variable_get(flickr_info_var_name());
       break;
   }
   return $flickr_info;
+}
+
+function flickr_info_var_name() {
+  global $language;
+  $var_name = 'flickr_info_' . $language->language;
+  return $var_name;
 }

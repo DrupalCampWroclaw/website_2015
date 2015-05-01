@@ -33,10 +33,10 @@ function session_flag_default_flags() {
     'types' => array(
       0 => 'session',
     ),
-    'flag_short' => 'I\'d like to attend this session',
+    'flag_short' => 'Vote for this session',
     'flag_long' => 'Express interest in this session',
     'flag_message' => 'Your vote has been recorded!',
-    'unflag_short' => 'Retract interest in session',
+    'unflag_short' => 'Retract vote in session',
     'unflag_long' => 'Retract your vote for this session.',
     'unflag_message' => 'Your vote has been retracted.',
     'unflag_denied_text' => '',

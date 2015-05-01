@@ -5,3 +5,40 @@
  */
 
 include_once 'mobileapi.features.inc';
+
+/**
+ * Implements hook_service_resources().
+ *
+ * Sample URL:
+ *   http://example.com/api/session_day.json
+ */
+function mobileapi_services_resources() {
+
+  $resources = array(
+    'session_day' => array(
+      'operations' => array(
+        'index' => array(
+          'file' => array(
+            'type' => 'inc',
+            'module' => 'mobileapi',
+            'name' => 'resources/mobileapi',
+          ),
+          'callback' => 'mobileapi_session_services_data',
+          'args' => array(
+            array(
+              'name' => 'date',
+              'optional' => TRUE,
+              'type' => 'string',
+              'description' => 'date',
+              'default value' => '2015-05-29',
+              'source' => array('param' => 'date'),
+            ),
+          ),
+          'access arguments' => array('access content'),
+        ), // end Index
+      ),
+    ),
+  );
+
+  return $resources;
+}

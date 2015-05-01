@@ -46,6 +46,7 @@ function session_views_default_views() {
     'field_session_language' => 'field_session_language',
     'count' => 'count',
     'field_session_type' => 'field_session_type',
+    'ops' => 'ops',
   );
   $handler->display->display_options['style_options']['default'] = 'count';
   $handler->display->display_options['style_options']['info'] = array(
@@ -89,6 +90,11 @@ function session_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
+    'ops' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
+    ),
   );
   /* Header: Global: PHP */
   $handler->display->display_options['header']['php']['id'] = 'php';
@@ -100,6 +106,13 @@ function session_views_default_views() {
   $handler->display->display_options['relationships']['flag_count_rel']['field'] = 'flag_count_rel';
   $handler->display->display_options['relationships']['flag_count_rel']['required'] = 0;
   $handler->display->display_options['relationships']['flag_count_rel']['flag'] = 'session_vote';
+  /* Relationship: Flags: session_vote */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'session_vote';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -136,6 +149,12 @@ function session_views_default_views() {
   $handler->display->display_options['fields']['field_session_type']['table'] = 'field_data_field_session_type';
   $handler->display->display_options['fields']['field_session_type']['field'] = 'field_session_type';
   $handler->display->display_options['fields']['field_session_type']['exclude'] = TRUE;
+  /* Field: Flags: Flag link */
+  $handler->display->display_options['fields']['ops']['id'] = 'ops';
+  $handler->display->display_options['fields']['ops']['table'] = 'flagging';
+  $handler->display->display_options['fields']['ops']['field'] = 'ops';
+  $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
+  $handler->display->display_options['fields']['ops']['label'] = 'Vote';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -185,6 +204,7 @@ function session_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('counter'),
+    t('flag'),
     t('Title'),
     t('Poziom zaawansowania'),
     t('Prelegenci'),
@@ -193,6 +213,7 @@ function session_views_default_views() {
     t('.'),
     t(' '),
     t('Type'),
+    t('Vote'),
     t('Page'),
     t('Propozycje wykładów'),
     t('more'),

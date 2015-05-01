@@ -16,37 +16,31 @@ function mobileapi_default_services_endpoint() {
   $endpoint->name = 'mobile';
   $endpoint->server = 'rest_server';
   $endpoint->path = 'api';
-  $endpoint->authentication = array();
-  $endpoint->server_settings = array();
+  $endpoint->authentication = array(
+    'services' => 'services',
+  );
+  $endpoint->server_settings = array(
+    'formatters' => array(
+      'json' => TRUE,
+      'bencode' => FALSE,
+      'jsonp' => FALSE,
+      'php' => FALSE,
+      'rss' => FALSE,
+      'xml' => FALSE,
+    ),
+    'parsers' => array(
+      'application/json' => TRUE,
+      'application/x-www-form-urlencoded' => TRUE,
+      'application/vnd.php.serialized' => FALSE,
+      'application/xml' => FALSE,
+      'multipart/form-data' => FALSE,
+      'text/xml' => FALSE,
+    ),
+  );
   $endpoint->resources = array(
-    'node' => array(
+    'session_day' => array(
       'operations' => array(
-        'retrieve' => array(
-          'enabled' => '1',
-        ),
         'index' => array(
-          'enabled' => '1',
-        ),
-      ),
-      'relationships' => array(
-        'files' => array(
-          'enabled' => '1',
-        ),
-      ),
-    ),
-    'user' => array(
-      'operations' => array(
-        'retrieve' => array(
-          'enabled' => '1',
-        ),
-        'index' => array(
-          'enabled' => '1',
-        ),
-      ),
-    ),
-    'views' => array(
-      'operations' => array(
-        'retrieve' => array(
           'enabled' => '1',
         ),
       ),
