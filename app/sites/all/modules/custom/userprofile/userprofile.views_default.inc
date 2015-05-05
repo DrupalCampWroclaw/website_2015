@@ -22,7 +22,7 @@ function userprofile_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Uczestnicy';
+  $handler->display->display_options['title'] = 'Attendees';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'więcej';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -232,7 +232,7 @@ function userprofile_views_default_views() {
   );
   $translatables['people'] = array(
     t('Master'),
-    t('Uczestnicy'),
+    t('Attendees'),
     t('więcej'),
     t('Apply'),
     t('Przywróć'),
@@ -242,7 +242,6 @@ function userprofile_views_default_views() {
     t('File'),
     t('<p>[field_user_first_name] [field_user_last_name]</p>
 <p>[field_user_organization]</p>'),
-    t('Attendees'),
     t('more'),
     t('Speakers'),
     t('Team'),

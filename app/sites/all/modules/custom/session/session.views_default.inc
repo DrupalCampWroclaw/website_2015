@@ -125,26 +125,25 @@ function session_views_default_views() {
   $handler->display->display_options['fields']['field_session_experience_level']['id'] = 'field_session_experience_level';
   $handler->display->display_options['fields']['field_session_experience_level']['table'] = 'field_data_field_session_experience_level';
   $handler->display->display_options['fields']['field_session_experience_level']['field'] = 'field_session_experience_level';
-  $handler->display->display_options['fields']['field_session_experience_level']['label'] = 'Poziom zaawansowania';
   /* Field: Content: Speakers */
   $handler->display->display_options['fields']['field_session_speakers']['id'] = 'field_session_speakers';
   $handler->display->display_options['fields']['field_session_speakers']['table'] = 'field_data_field_session_speakers';
   $handler->display->display_options['fields']['field_session_speakers']['field'] = 'field_session_speakers';
-  $handler->display->display_options['fields']['field_session_speakers']['label'] = 'Prelegenci';
   $handler->display->display_options['fields']['field_session_speakers']['settings'] = array(
     'link' => 1,
   );
+  $handler->display->display_options['fields']['field_session_speakers']['delta_offset'] = '0';
   /* Field: Content: Session Language */
   $handler->display->display_options['fields']['field_session_language']['id'] = 'field_session_language';
   $handler->display->display_options['fields']['field_session_language']['table'] = 'field_data_field_session_language';
   $handler->display->display_options['fields']['field_session_language']['field'] = 'field_session_language';
-  $handler->display->display_options['fields']['field_session_language']['label'] = 'Język';
+  $handler->display->display_options['fields']['field_session_language']['label'] = 'Language';
   /* Field: Flags: Flag counter */
   $handler->display->display_options['fields']['count']['id'] = 'count';
   $handler->display->display_options['fields']['count']['table'] = 'flag_counts';
   $handler->display->display_options['fields']['count']['field'] = 'count';
   $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
-  $handler->display->display_options['fields']['count']['label'] = 'Głosy';
+  $handler->display->display_options['fields']['count']['label'] = 'Votes';
   $handler->display->display_options['fields']['count']['separator'] = ' ';
   /* Field: Content: Type */
   $handler->display->display_options['fields']['field_session_type']['id'] = 'field_session_type';
@@ -187,7 +186,7 @@ function session_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Propozycje wykładów';
+  $handler->display->display_options['title'] = 'Proposed Sessions';
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: PHP */
   $handler->display->display_options['header']['php']['id'] = 'php';
@@ -208,16 +207,16 @@ function session_views_default_views() {
     t('counter'),
     t('flag'),
     t('Title'),
-    t('Poziom zaawansowania'),
-    t('Prelegenci'),
-    t('Język'),
-    t('Głosy'),
+    t('Experience level'),
+    t('Speakers'),
+    t('Language'),
+    t('Votes'),
     t('.'),
     t(' '),
     t('Type'),
     t('Vote'),
     t('Page'),
-    t('Propozycje wykładów'),
+    t('Proposed Sessions'),
     t('more'),
   );
   $export['sessions'] = $view;
