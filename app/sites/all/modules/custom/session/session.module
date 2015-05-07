@@ -197,7 +197,7 @@ function sessions_get_sessions_data($days, $rooms) {
 }
 
 function session_accepted_sessions_block() {
-  $output = t('Accepted sessions');
+  $output = '';
 
   $days = session_get_conference_days();
   $rooms = session_get_rooms();
