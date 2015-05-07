@@ -2199,7 +2199,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1425371409');
+  background-image: url('../images/progress.gif?1416815997');
 }
 
 /* line 809, ../sass/components/_misc.scss */
@@ -2424,6 +2424,63 @@ table tr:hover td {
     color: #ffffff;
     cursor: pointer;
   }
+}
+
+/* line 2, ../sass/components/blocks/_block-session-session-accepted-sessions.scss */
+.sessions-accepted.sessions-accepted-day h2.day {
+  text-align: center;
+}
+/* line 5, ../sass/components/blocks/_block-session-session-accepted-sessions.scss */
+.sessions-accepted.sessions-accepted-day .sessions-accepted-room {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 10, ../sass/components/blocks/_block-session-session-accepted-sessions.scss */
+.sessions-accepted.sessions-accepted-day .sessions-accepted-room > .inner {
+  padding: 0 0.5em;
+  position: relative;
+}
+/* line 15, ../sass/components/blocks/_block-session-session-accepted-sessions.scss */
+.sessions-accepted.sessions-accepted-day .sessions-accepted-room .room-name {
+  background: #007aac;
+  color: #ffffff;
+  text-align: center;
+}
+/* line 21, ../sass/components/blocks/_block-session-session-accepted-sessions.scss */
+.sessions-accepted.sessions-accepted-day .sessions-accepted-room .sessions-list {
+  position: relative;
+}
+/* line 26, ../sass/components/blocks/_block-session-session-accepted-sessions.scss */
+.sessions-accepted.sessions-accepted-day .sessions-accepted-room .sessions-accepted-session {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+/* line 30, ../sass/components/blocks/_block-session-session-accepted-sessions.scss */
+.sessions-accepted.sessions-accepted-day .sessions-accepted-room .sessions-accepted-session > .inner {
+  height: 100%;
+  background: #ffffff;
+  border-top: 1px solid #e84e39;
+  margin: 0.2em;
+  padding: 0.5em;
+}
+/* line 39, ../sass/components/blocks/_block-session-session-accepted-sessions.scss */
+.sessions-accepted.sessions-accepted-day .sessions-accepted-room .session-accepted-session-time {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+/* line 45, ../sass/components/blocks/_block-session-session-accepted-sessions.scss */
+.sessions-accepted.sessions-accepted-day .sessions-accepted-room .session-accepted-session-speakers a {
+  color: #e84e39;
+  font-size: 0.9em;
+}
+/* line 52, ../sass/components/blocks/_block-session-session-accepted-sessions.scss */
+.sessions-accepted.sessions-accepted-day .sessions-accepted-room.columns-6 {
+  width: 50%;
+}
+/* line 56, ../sass/components/blocks/_block-session-session-accepted-sessions.scss */
+.sessions-accepted.sessions-accepted-day .sessions-accepted-room.columns-4 {
+  width: 33%;
 }
 
 /* line 2, ../sass/components/blocks/_block_sponsors-frontpage.scss */
@@ -3244,7 +3301,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #eb4e3a;
   text-align: right;
 }
-/* line 38, ../../../../../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
 .view-news-frontpage .views-row .node-news.node-teaser ul.links:after {
   content: "";
   display: table;

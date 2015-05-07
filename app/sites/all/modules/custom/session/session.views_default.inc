@@ -261,6 +261,10 @@ function session_views_default_views() {
   $handler->display->display_options['relationships']['field_session_timeslot_target_id']['table'] = 'field_data_field_session_timeslot';
   $handler->display->display_options['relationships']['field_session_timeslot_target_id']['field'] = 'field_session_timeslot_target_id';
   $handler->display->display_options['relationships']['field_session_timeslot_target_id']['required'] = TRUE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_timeslot_room_target_id']['id'] = 'field_timeslot_room_target_id';
+  $handler->display->display_options['relationships']['field_timeslot_room_target_id']['table'] = 'field_data_field_timeslot_room';
+  $handler->display->display_options['relationships']['field_timeslot_room_target_id']['field'] = 'field_timeslot_room_target_id';
   /* Field: Content: Date */
   $handler->display->display_options['fields']['field_timeslot_date']['id'] = 'field_timeslot_date';
   $handler->display->display_options['fields']['field_timeslot_date']['table'] = 'field_data_field_timeslot_date';
@@ -313,10 +317,49 @@ function session_views_default_views() {
   $handler->display->display_options['fields']['field_session_language']['relationship'] = 'reverse_field_session_timeslot_node';
   $handler->display->display_options['fields']['field_session_language']['label'] = '';
   $handler->display->display_options['fields']['field_session_language']['element_label_colon'] = FALSE;
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['relationship'] = 'field_session_timeslot_target_id';
+  $handler->display->display_options['fields']['created']['date_format'] = 'long';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Content: timeslot_weight */
+  $handler->display->display_options['fields']['field_timeslot_weight']['id'] = 'field_timeslot_weight';
+  $handler->display->display_options['fields']['field_timeslot_weight']['table'] = 'field_data_field_timeslot_weight';
+  $handler->display->display_options['fields']['field_timeslot_weight']['field'] = 'field_timeslot_weight';
+  $handler->display->display_options['fields']['field_timeslot_weight']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: room_weight */
+  $handler->display->display_options['fields']['field_room_weight']['id'] = 'field_room_weight';
+  $handler->display->display_options['fields']['field_room_weight']['table'] = 'field_data_field_room_weight';
+  $handler->display->display_options['fields']['field_room_weight']['field'] = 'field_room_weight';
+  $handler->display->display_options['fields']['field_room_weight']['relationship'] = 'field_timeslot_room_target_id';
+  $handler->display->display_options['fields']['field_room_weight']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Sort criterion: Content: room_weight (field_room_weight) */
+  $handler->display->display_options['sorts']['field_room_weight_value']['id'] = 'field_room_weight_value';
+  $handler->display->display_options['sorts']['field_room_weight_value']['table'] = 'field_data_field_room_weight';
+  $handler->display->display_options['sorts']['field_room_weight_value']['field'] = 'field_room_weight_value';
+  $handler->display->display_options['sorts']['field_room_weight_value']['relationship'] = 'field_timeslot_room_target_id';
+  /* Sort criterion: Content: timeslot_weight (field_timeslot_weight) */
+  $handler->display->display_options['sorts']['field_timeslot_weight_value']['id'] = 'field_timeslot_weight_value';
+  $handler->display->display_options['sorts']['field_timeslot_weight_value']['table'] = 'field_data_field_timeslot_weight';
+  $handler->display->display_options['sorts']['field_timeslot_weight_value']['field'] = 'field_timeslot_weight_value';
+  $handler->display->display_options['sorts']['field_timeslot_weight_value']['relationship'] = 'field_session_timeslot_target_id';
   /* Sort criterion: Content: Date -  start date (field_timeslot_date) */
   $handler->display->display_options['sorts']['field_timeslot_date_value']['id'] = 'field_timeslot_date_value';
   $handler->display->display_options['sorts']['field_timeslot_date_value']['table'] = 'field_data_field_timeslot_date';
   $handler->display->display_options['sorts']['field_timeslot_date_value']['field'] = 'field_timeslot_date_value';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['relationship'] = 'field_session_timeslot_target_id';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -375,7 +418,11 @@ function session_views_default_views() {
     t('Desc'),
     t('Content referencing Content from field_session_timeslot'),
     t('Content entity referenced from field_session_timeslot'),
+    t('Content entity referenced from field_timeslot_room'),
     t('Room'),
+    t('Post date'),
+    t('timeslot_weight'),
+    t('room_weight'),
     t('Day'),
     t('more'),
     t('Wszystko'),

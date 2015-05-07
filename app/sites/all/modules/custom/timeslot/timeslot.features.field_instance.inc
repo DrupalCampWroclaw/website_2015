@@ -104,6 +104,51 @@ function timeslot_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-timeslot-field_timeslot_weight'
+  $field_instances['node-timeslot-field_timeslot_weight'] = array(
+    'bundle' => 'timeslot',
+    'default_value' => array(
+      0 => array(
+        'value' => 50,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_timeslot_weight',
+    'label' => 'timeslot_weight',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => 100,
+      'min' => 0,
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'node-timeslot-title_field'
   $field_instances['node-timeslot-title_field'] = array(
     'bundle' => 'timeslot',
@@ -152,6 +197,7 @@ function timeslot_field_default_field_instances() {
   t('Date');
   t('Room');
   t('Title');
+  t('timeslot_weight');
 
   return $field_instances;
 }
