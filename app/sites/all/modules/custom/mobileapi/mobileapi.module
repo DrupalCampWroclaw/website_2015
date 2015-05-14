@@ -15,7 +15,7 @@ include_once 'mobileapi.features.inc';
 function mobileapi_services_resources() {
 
   $resources = array(
-    'session_day' => array(
+    'sessions' => array(
       'operations' => array(
         'index' => array(
           'file' => array(
@@ -23,17 +23,7 @@ function mobileapi_services_resources() {
             'module' => 'mobileapi',
             'name' => 'resources/mobileapi',
           ),
-          'callback' => 'mobileapi_session_services_data',
-          'args' => array(
-            array(
-              'name' => 'date',
-              'optional' => TRUE,
-              'type' => 'string',
-              'description' => 'date',
-              'default value' => '2015-05-29',
-              'source' => array('param' => 'date'),
-            ),
-          ),
+          'callback' => 'mobileapi_sessions_services_data',
           'access arguments' => array('access content'),
         ), // end Index
       ),

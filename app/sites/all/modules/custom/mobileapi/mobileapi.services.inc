@@ -16,9 +16,7 @@ function mobileapi_default_services_endpoint() {
   $endpoint->name = 'mobile';
   $endpoint->server = 'rest_server';
   $endpoint->path = 'api';
-  $endpoint->authentication = array(
-    'services' => 'services',
-  );
+  $endpoint->authentication = array();
   $endpoint->server_settings = array(
     'formatters' => array(
       'json' => TRUE,
@@ -38,7 +36,7 @@ function mobileapi_default_services_endpoint() {
     ),
   );
   $endpoint->resources = array(
-    'session_day' => array(
+    'sessions' => array(
       'operations' => array(
         'index' => array(
           'enabled' => '1',
