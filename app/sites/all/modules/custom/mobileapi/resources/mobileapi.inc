@@ -148,7 +148,7 @@ function mobile_session_language($session) {
  * Sort sessions.
  */
 function mobile_sessions_sort(&$collection, $index_name, $sort_type = SORT_ASC) {
-  $sort = [];
+  $sort = array();
 
   foreach ($collection as $key => $row) {
     $sort[] = $row[$index_name];
