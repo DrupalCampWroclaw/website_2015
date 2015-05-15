@@ -175,13 +175,6 @@ function session_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'session' => 'session',
   );
-  /* Filter criterion: Content: Status (field_session_status) */
-  $handler->display->display_options['filters']['field_session_status_value']['id'] = 'field_session_status_value';
-  $handler->display->display_options['filters']['field_session_status_value']['table'] = 'field_data_field_session_status';
-  $handler->display->display_options['filters']['field_session_status_value']['field'] = 'field_session_status_value';
-  $handler->display->display_options['filters']['field_session_status_value']['value'] = array(
-    0 => '0',
-  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');

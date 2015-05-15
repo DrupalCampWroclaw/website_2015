@@ -981,6 +981,16 @@ function application_user_default_permissions() {
     'module' => 'filter',
   );
 
+  // Exported permission: 'view any simple_block_with_translations bean'.
+  $permissions['view any simple_block_with_translations bean'] = array(
+    'name' => 'view any simple_block_with_translations bean',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'bean',
+  );
+
   // Exported permission: 'view field_session_status'.
   $permissions['view field_session_status'] = array(
     'name' => 'view field_session_status',
@@ -1049,16 +1059,6 @@ function application_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'system',
-  );
-
-  // Exported permission: 'view any simple_block_with_translations bean'.
-  $permissions['view any simple_block_with_translations bean'] = array(
-    'name' => 'view any simple_block_with_translations bean',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'bean',
   );
 
   return $permissions;
