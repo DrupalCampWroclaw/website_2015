@@ -126,6 +126,23 @@ function timeslot_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'timeslot' => 'timeslot',
   );
+  /* Filter criterion: Content: Date -  start date (field_timeslot_date) */
+  $handler->display->display_options['filters']['field_timeslot_date_value']['id'] = 'field_timeslot_date_value';
+  $handler->display->display_options['filters']['field_timeslot_date_value']['table'] = 'field_data_field_timeslot_date';
+  $handler->display->display_options['filters']['field_timeslot_date_value']['field'] = 'field_timeslot_date_value';
+  $handler->display->display_options['filters']['field_timeslot_date_value']['operator'] = 'between';
+  $handler->display->display_options['filters']['field_timeslot_date_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_timeslot_date_value']['expose']['operator_id'] = 'field_timeslot_date_value_op';
+  $handler->display->display_options['filters']['field_timeslot_date_value']['expose']['label'] = 'Date -  start date (field_timeslot_date)';
+  $handler->display->display_options['filters']['field_timeslot_date_value']['expose']['operator'] = 'field_timeslot_date_value_op';
+  $handler->display->display_options['filters']['field_timeslot_date_value']['expose']['identifier'] = 'field_timeslot_date_value';
+  $handler->display->display_options['filters']['field_timeslot_date_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -150,6 +167,7 @@ function timeslot_views_default_views() {
     t('Room'),
     t('Edit link'),
     t('Session'),
+    t('Date -  start date (field_timeslot_date)'),
     t('Page'),
   );
   $export['timeslots'] = $view;

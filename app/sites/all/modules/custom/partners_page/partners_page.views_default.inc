@@ -55,10 +55,11 @@ function partners_page_views_default_views() {
   $handler->display->display_options['fields']['field_partner_logo']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_partner_logo']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_partner_logo']['alter']['path'] = '[field_partner_website]';
+  $handler->display->display_options['fields']['field_partner_logo']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['field_partner_logo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_partner_logo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_partner_logo']['settings'] = array(
-    'image_style' => '450x300',
+    'image_style' => '395x197',
     'image_link' => '',
   );
   /* Field: Content: Partner type */

@@ -70,11 +70,11 @@ function session_flag_default_flags() {
 function session_node_info() {
   $items = array(
     'session' => array(
-      'name' => t('Session'),
+      'name' => t('Sesja'),
       'base' => 'node_content',
-      'description' => t('Session'),
+      'description' => t('Sesja'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Tytuł'),
       'help' => '',
     ),
   );

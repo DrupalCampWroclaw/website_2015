@@ -736,6 +736,7 @@ function application_user_default_permissions() {
     'name' => 'flag session_vote',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'flag',
   );
@@ -921,6 +922,7 @@ function application_user_default_permissions() {
     'name' => 'unflag session_vote',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'flag',
   );
@@ -977,6 +979,16 @@ function application_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: 'view any simple_block_with_translations bean'.
+  $permissions['view any simple_block_with_translations bean'] = array(
+    'name' => 'view any simple_block_with_translations bean',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'bean',
   );
 
   // Exported permission: 'view field_session_status'.

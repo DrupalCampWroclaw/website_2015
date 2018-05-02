@@ -62,11 +62,11 @@ function layout_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-6',
         ),
-        'layout-flickr_gallery' => array(
-          'module' => 'layout',
-          'delta' => 'flickr_gallery',
+        'flickr-flickr' => array(
+          'module' => 'flickr',
+          'delta' => 'flickr',
           'region' => 'footer',
-          'weight' => '-5',
+          'weight' => '-4',
         ),
       ),
     ),
@@ -122,9 +122,9 @@ function layout_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-3' => array(
-          'module' => 'block',
-          'delta' => '3',
+        'bean-proposed-sessions-text' => array(
+          'module' => 'bean',
+          'delta' => 'proposed-sessions-text',
           'region' => 'content_top',
           'weight' => '-10',
         ),
@@ -166,13 +166,13 @@ function layout_context_default_contexts() {
           'module' => 'layout',
           'delta' => 'sessions',
           'region' => 'sidebar_second',
-          'weight' => '-8',
+          'weight' => '-9',
         ),
-        'block-2' => array(
-          'module' => 'block',
-          'delta' => '2',
+        'bean-important-dates' => array(
+          'module' => 'bean',
+          'delta' => 'important-dates',
           'region' => 'sidebar_second',
-          'weight' => '15',
+          'weight' => '-8',
         ),
       ),
     ),

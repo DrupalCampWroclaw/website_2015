@@ -1,7 +1,7 @@
 name = Partners page
 core = 7.x
 package = APP
-version = 7.x-1.0-beta4
+version = 7.x-1.0-beta5
 project = partners_page
 dependencies[] = image
 dependencies[] = link
@@ -21,6 +21,7 @@ features[field_instance][] = node-partners-field_partner_logo
 features[field_instance][] = node-partners-field_partner_type
 features[field_instance][] = node-partners-field_partner_website
 features[field_instance][] = node-partners-title_field
+features[image][] = 395x197
 features[image][] = 450x300
 features[node][] = partners
 features[variable][] = comment_anonymous_partners

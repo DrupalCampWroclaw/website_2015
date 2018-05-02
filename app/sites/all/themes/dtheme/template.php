@@ -136,3 +136,11 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function dtheme_views_pre_render(&$view)  {
+  $view->set_title(t($view->get_title()));
+}

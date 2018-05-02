@@ -805,3 +805,7 @@ tr.selected td {
     background-image: image-url("progress.gif");
   }
 }
+
+iframe, object, embed {
+  max-width: 100%;
+}

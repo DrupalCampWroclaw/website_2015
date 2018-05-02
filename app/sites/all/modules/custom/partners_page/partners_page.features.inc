@@ -26,6 +26,29 @@ function partners_page_views_api($module = NULL, $api = NULL) {
 function partners_page_image_default_styles() {
   $styles = array();
 
+  // Exported image style: 395x197.
+  $styles['395x197'] = array(
+    'name' => '395x197',
+    'label' => '395x197',
+    'effects' => array(
+      1 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 395,
+          'height' => 197,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: 450x300.
   $styles['450x300'] = array(
     'name' => '450x300',

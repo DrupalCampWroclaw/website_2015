@@ -1,5 +1,6 @@
 table {
-  width: 100%;
+  display: block;
+  overflow-x: auto;
   th {
     background-color: #f0f0f0;
     border-color: #d9d9d9;
@@ -35,5 +36,10 @@ table {
   tr.odd:hover td,
   tr:hover td {
     background-color: #fcf1ed;
+  }
+  @media screen and (min-width: $screen-tablet-min) {
+    display: table;
+    width: 100%;
+    overflow-x: hidden;
   }
 }

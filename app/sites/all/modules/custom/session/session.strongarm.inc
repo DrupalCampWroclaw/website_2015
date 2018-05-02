@@ -115,7 +115,7 @@ function session_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '9',
         ),
       ),
       'display' => array(),
@@ -141,7 +141,7 @@ function session_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_session';
-  $strongarm->value = '4';
+  $strongarm->value = '0';
   $export['language_content_type_session'] = $strongarm;
 
   $strongarm = new stdClass();
